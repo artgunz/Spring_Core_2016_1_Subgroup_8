@@ -6,32 +6,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Auditorium {
-    String name;
-    Integer numberOfSeats;
-    List<Integer> vipSeats;
+    final String name;
+    final List<Seat> seats;
+
+    public Auditorium(final String name, final List<Seat> seats) {
+        this.name = name;
+        this.seats = seats;
+    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(final String name) {
-        this.name = name;
-    }
-
-    public Integer getNumberOfSeats() {
-        return numberOfSeats;
-    }
-
-    public void setNumberOfSeats(final Integer numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
-
-    public List<Integer> getVipSeats() {
-        return vipSeats;
-    }
-
-    public void setVipSeats(final List<Integer> vipSeats) {
-        this.vipSeats = vipSeats;
+    public List<Seat> getSeats() {
+        return seats;
     }
 
     @Override

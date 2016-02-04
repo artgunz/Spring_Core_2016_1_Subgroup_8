@@ -17,17 +17,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository("hashMapEventDAO")
 public class HashMapEventDAOImpl implements EventDAO {
-    private final static Set<Event> eventStorage = new HashSet<Event>();
+    private final static Set<Event> eventStorage = new HashSet<>();
     private final static Set<ShowEvent> showEventStorage = new HashSet<ShowEvent>();
-
-    @Autowired
-    @Qualifier("eventRegistrationPopulator")
-    Populator<EventCreationInformation, Event> eventRegistrationPopulator;
 
     public Event createEvent(final EventCreationInformation eventCreationInformation) {
         final Event event = new Event(eventCreationInformation.getName(), eventCreationInformation.getBasePrice(), eventCreationInformation.getRating());
-        eventRegistrationPopulator.populate(eventCreationInformation, event);
-
         return event;
     }
 

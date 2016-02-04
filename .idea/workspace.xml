@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8580178e-cc8e-42a8-ab2f-15e8ee332bac" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" afterPath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -27,7 +28,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/App.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Currency.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Currency.java" />
@@ -37,6 +40,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/User.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/data/UserRegistrationInformation.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/data/UserRegistrationInformation.java" />
@@ -50,8 +54,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/EventService.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/EventService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/TicketService.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/TicketService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/spring/core/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/spring/core/AppTest.java" />
     </list>
@@ -76,115 +80,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="DiscountServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/DiscountServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/BookingServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuditoriumDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMapAuditoriumDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMapUserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuditoriumService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/AuditoriumService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/BookingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HashMapEventDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <caret line="41" column="20" selection-start-line="35" selection-start-column="5" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#650#657#0" expanded="true" />
-                <element signature="e#1705#1712#0" expanded="true" />
-                <element signature="e#2029#2030#0" expanded="true" />
-                <element signature="e#2076#2077#0" expanded="true" />
+                <element signature="e#1485#1492#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Event.java">
+      <file leaf-file-name="Set.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/util/Set.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1098#1105#0" expanded="true" />
-                <element signature="e#1535#1542#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventCreationInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/EventCreationInformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding>
-                <element signature="e#200#201#0" expanded="false" />
-                <element signature="e#227#228#0" expanded="false" />
-                <element signature="e#273#274#0" expanded="false" />
-                <element signature="e#305#306#0" expanded="false" />
-                <element signature="e#340#341#0" expanded="false" />
-                <element signature="e#372#373#0" expanded="false" />
-                <element signature="e#427#428#0" expanded="false" />
-                <element signature="e#469#470#0" expanded="false" />
-                <element signature="e#502#503#0" expanded="false" />
-                <element signature="e#531#532#0" expanded="false" />
-                <element signature="e#581#582#0" expanded="false" />
-                <element signature="e#617#618#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <caret line="224" column="9" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/EventService.java">
+      <file leaf-file-name="HashMapTicketsDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapTicketsDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#567#568#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auditorium.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java">
+      <file leaf-file-name="AuditoriumServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/AuditoriumServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.39338842">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding>
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,24 +224,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/spring/core/SpringConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Tikets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Tiket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/AuditoriumService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/BookingService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/DiscountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/SpringConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/UserF.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/user/search/UserSearchInformation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/UserRegistrationInformation.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/populator/UserRegistrationPopulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/facade/UserFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Tiсket.java" />
@@ -238,15 +235,10 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/core/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/populator/Populator.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/facade/impl/UserFacadeImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Discount.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Currensy.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Currency.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/facade/EventFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumToEventRelation.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/EventShowInformation.java" />
@@ -256,11 +248,33 @@
         <option value="$PROJECT_DIR$/src/main/java/spring/core/service/EventService.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/ShowEventBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Event.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/BookingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/BookingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/HashMapTicketsDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/UserTicket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/TicketsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapTicketsDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/UserStatistic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/BookingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/Discount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/data/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserBirthDiscountStrategyImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserTicketsBoughtDiscountStrategyImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/DiscountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/spring/core/service/impl/AuditoriumServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -377,6 +391,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring_Core_2016_1_Subgroup_8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="strategy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -682,6 +726,13 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="spring.core.populator.impl" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="spring.core.service.impl" />
+      <recent name="spring.core.dao.impl.map" />
+      <recent name="spring.core.strategy" />
+      <recent name="spring.core.dao.impl" />
+      <recent name="spring.core.service" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -948,7 +999,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33023736" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33023736" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -957,7 +1008,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -983,9 +1034,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added EventService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added EventService" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1005,24 +1060,6 @@
             <element signature="docComment;class#App#0" expanded="false" />
             <element signature="e#118#119#0" expanded="false" />
             <element signature="e#170#171#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3258786">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/DiscountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.111821085">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,16 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/populator/impl/UserRegistrationPopulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1104,14 +1131,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,71 +1150,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Discount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#160#161#0" expanded="false" />
-            <element signature="e#212#213#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Currency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#366#367#0" expanded="false" />
-            <element signature="e#422#423#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#498#499#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Price.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#155#156#0" expanded="false" />
-            <element signature="e#211#212#0" expanded="false" />
-            <element signature="e#251#252#0" expanded="false" />
-            <element signature="e#283#284#0" expanded="false" />
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#359#360#0" expanded="false" />
-            <element signature="e#393#394#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,50 +1179,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#608#614#0" expanded="false" />
-            <element signature="e#1729#1735#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/populator/Populator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1310,14 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/AuditoriumService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1326,58 +1237,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.33386582">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/populator/Populator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/populator/impl/UserRegistrationPopulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/UserTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14049587">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/TicketsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/DiscountService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#650#657#0" expanded="true" />
-            <element signature="e#1705#1712#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-            <element signature="e#2076#2077#0" expanded="true" />
-          </folding>
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1385,11 +1379,191 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1098#1105#0" expanded="true" />
-            <element signature="e#1535#1542#0" expanded="true" />
+            <element signature="e#1089#1096#0" expanded="true" />
+            <element signature="e#1526#1533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/Discount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/UserStatistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/UserTicketsBoughtDiscountStrategyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/UserBirthDiscountStrategyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/DiscountStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/BookingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/DiscountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapUserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/BookingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="224" column="9" selection-start-line="224" selection-start-column="9" selection-end-line="224" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="20" selection-start-line="35" selection-start-column="5" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1485#1492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapTicketsDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/AuditoriumService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/service/impl/AuditoriumServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39338842">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
           </folding>
         </state>
       </provider>

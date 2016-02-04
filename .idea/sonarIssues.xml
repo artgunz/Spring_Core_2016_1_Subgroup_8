@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
@@ -53,7 +58,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/TicketsDAO.java">
           <value>
             <set />
           </value>
@@ -73,7 +88,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/HashMapTicketsDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapTicketsDAOImpl.java">
           <value>
             <set />
           </value>
@@ -168,6 +198,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/UserStatistic.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/UserTicket.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/user/search/UserSearchInformation.java">
           <value>
             <set />
@@ -228,6 +268,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/BookingServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/DiscountService.java">
           <value>
             <set />
@@ -253,6 +298,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/AuditoriumServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/BookingServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/DiscountServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java">
           <value>
             <set />
@@ -268,7 +328,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserBirthDiscountStrategyImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserTicketsBoughtDiscountStrategyImpl.java">
           <value>
             <set />
           </value>

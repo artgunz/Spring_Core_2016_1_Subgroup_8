@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface BookingService {
-    Price getTicketPrice(Event event, Date date, List<Seat> seats, User user);
+    Price getTicketPrice(Event event, Date date, Seat seat, User user);
 
     void bookTicket(User user, Ticket ticket);
 

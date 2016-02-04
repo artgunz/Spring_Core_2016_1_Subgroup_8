@@ -8,4 +8,8 @@ public enum Rating {
     Rating(final Double priceIncrement) {
         this.priceIncrement = priceIncrement;
     }
+
+    public Double getPriceIncrement() {
+        return priceIncrement;
+    }
 }
