@@ -18,9 +18,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDAO;
 
-    @Autowired
-    TicketService ticketService;
-
     public User register(final UserRegistrationInformation registrationInformation) {
         return userDAO.createUser(registrationInformation);
     }

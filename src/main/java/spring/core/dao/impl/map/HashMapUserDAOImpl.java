@@ -6,7 +6,9 @@ import spring.core.data.UserRegistrationInformation;
 import spring.core.populator.Populator;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,7 +16,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("hashUserDao")
 public class HashMapUserDAOImpl implements UserDAO {
-    private final static List<User> userStorage = new ArrayList<User>();
+    private final static Set<User> userStorage = new HashSet<User>();
 
     @Autowired
     @Qualifier("userRegistrationPopulator")

@@ -18,7 +18,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumToEventRelation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/Data.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/ShowEventBuilder.java">
           <value>
             <set />
           </value>
@@ -43,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/UserDAO.java">
           <value>
             <set />
@@ -54,6 +69,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/UserF.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapEventDAOImpl.java">
           <value>
             <set />
           </value>
@@ -93,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/EventShowInformation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java">
           <value>
             <set />
@@ -104,6 +129,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Seat.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/ShowEvent.java">
           <value>
             <set />
           </value>
@@ -143,12 +173,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/facade/EventFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/facade/UserFacade.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/facade/UserFacadeImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/facade/impl/EventFacadeImpl.java">
           <value>
             <set />
           </value>
@@ -164,6 +204,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/populator/UserRegistrationPopulator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/populator/impl/EventRegistrationPopulator.java">
           <value>
             <set />
           </value>
@@ -208,6 +253,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/EventServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java">
           <value>
             <set />
@@ -223,7 +278,27 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccore/resources/ctccore-items.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccore/testsrc/ca/canadiantire/core/model/attribute/handler/TransientOrderBooleanAttributeHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/interceptor/AbstractOrderRemoveInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/testsrc/ca/canadiantire/ctcservices/interceptor/AbstractOrderRemoveInterceptorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/testsrc/ca/canadiantire/ctcservices/order/impl/CtcRefundServiceImplTest.java">
           <value>
             <set />
           </value>
