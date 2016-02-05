@@ -2,64 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8580178e-cc8e-42a8-ab2f-15e8ee332bac" name="Default" comment="Added EventService">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/App.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/configuration/SpringConfiguration.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/AuditoriumCsvFileReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/CsvFileReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/AuditoriumDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/EventDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/TicketsDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/UserDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapEventDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapTicketsDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapUserDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Auditorium.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Currency.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Discount.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Event.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/EventCreationInformation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Price.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Rating.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Seat.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/ShowEvent.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Ticket.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserRegistrationInformation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserStatistic.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserTicket.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/facade/UserFacade.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/facade/impl/UserFacadeImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/loader/AuditoriumLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/loader/AuditoriumLoaderImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/populator/Populator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/populator/impl/UserRegistrationPopulator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/AuditoriumService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/BookingService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/DiscountService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/EventService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/AuditoriumServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/BookingServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/DiscountServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/EventServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/UserServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/UserIdGeneratorStrategy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/DiscountStrategy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/UserBirthDiscountStrategyImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/UserTicketsBoughtDiscountStrategyImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/spring/core/AppTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/auditorium.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/AuditoriumLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/CsvFileReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/auditorium.csv" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/TicketService.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/DiscountStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/UserBirthDiscountStrategyImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/UserTicketsBoughtDiscountStrategyImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/AuditoriumCsvFileReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/CsvFileReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/loader/AuditoriumLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/loader/AuditoriumLoaderImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/UserBirthDiscountStrategyImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/UserTicketsBoughtDiscountStrategyImpl.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/App.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/configuration/SpringConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/configuration/SpringConfiguration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/loader/auditorium/AuditoriumLoader.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/loader/auditorium/AuditoriumLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/reader/CsvFileReader.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/reader/CsvFileReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/AuditoriumDAO.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/AuditoriumDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/EventDAO.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/EventDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/TicketsDAO.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/TicketsDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/UserDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapEventDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapEventDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapTicketsDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapTicketsDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapUserDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/dao/impl/map/HashMapUserDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Auditorium.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Auditorium.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Currency.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Currency.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Discount.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Discount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Event.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Event.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/EventCreationInformation.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/EventCreationInformation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Price.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Price.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Rating.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Rating.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Seat.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Seat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/ShowEvent.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/ShowEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/Ticket.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/Ticket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/User.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/UserRegistrationInformation.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserRegistrationInformation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/UserStatistic.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserStatistic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/data/UserTicket.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/data/UserTicket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/facade/UserFacade.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/facade/UserFacade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/facade/impl/UserFacadeImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/facade/impl/UserFacadeImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/populator/Populator.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/populator/Populator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/populator/impl/UserRegistrationPopulator.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/populator/impl/UserRegistrationPopulator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/AuditoriumService.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/AuditoriumService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/BookingService.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/BookingService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/DiscountService.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/DiscountService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/EventService.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/EventService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/impl/AuditoriumServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/AuditoriumServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/impl/BookingServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/BookingServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/impl/DiscountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/DiscountServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/impl/EventServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/EventServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/UserIdGeneratorStrategy.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/UserIdGeneratorStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/DiscountStrategy.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/DiscountStrategy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/impl/UserBirthDiscountStrategyImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/impl/UserBirthDiscountStrategyImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/impl/UserTicketsBoughtDiscountStrategyImpl.class" afterPath="$PROJECT_DIR$/target/classes/spring/core/strategy/discount/impl/UserTicketsBoughtDiscountStrategyImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/spring/core/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/spring/core/AppTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" afterPath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -68,6 +64,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_4_RELEASE.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_4_RELEASE.xml" />
@@ -83,8 +80,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spring_Core.iml" afterPath="$PROJECT_DIR$/Spring_Core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/auditorium.csv" afterPath="$PROJECT_DIR$/resources/auditorium.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/App.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/AuditoriumLoader.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/AuditoriumLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/CsvFileReader.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/CsvFileReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/AuditoriumDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/EventDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/dao/TicketsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/dao/TicketsDAO.java" />
@@ -123,7 +125,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/UserIdGeneratorStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/DiscountStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/DiscountStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/impl/UserBirthDiscountStrategyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/impl/UserBirthDiscountStrategyImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/impl/UserTicketsBoughtDiscountStrategyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/impl/UserTicketsBoughtDiscountStrategyImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/spring/core/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/spring/core/AppTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/auditorium.csv" afterPath="$PROJECT_DIR$/target/classes/auditorium.csv" />
     </list>
     <ignored path="Spring_Core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,11 +151,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.7334526">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,10 +173,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMapAuditoriumDAOImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HashMapAuditoriumDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39534885">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -483,6 +488,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring_Core_2016_1_Subgroup_8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="csv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1214,9 +1249,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1098#1105#0" expanded="true" />
-            <element signature="e#1535#1542#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1098#1105#0" expanded="false" />
+            <element signature="e#1535#1542#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1405,10 +1440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1423,10 +1458,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/dao/impl/map/HashMapAuditoriumDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring/core/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39534885">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.7334526">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
