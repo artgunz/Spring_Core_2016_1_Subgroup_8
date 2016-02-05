@@ -9,5 +9,8 @@ import java.util.List;
 
 public interface TicketsDAO {
     Ticket addTicket(User user, Ticket ticket);
+
     List<Ticket> getAllTickets(Event event, Date date);
+
+    List<Ticket> getTicketsForUser(User user);
 }

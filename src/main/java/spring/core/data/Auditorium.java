@@ -7,19 +7,28 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Auditorium {
     final String name;
-    final List<Seat> seats;
+    final Integer seatsCount;
+    List<Integer> vipSeats;
 
-    public Auditorium(final String name, final List<Seat> seats) {
+    public Auditorium(final String name, final Integer seatsCount) {
         this.name = name;
-        this.seats = seats;
+        this.seatsCount = seatsCount;
     }
 
     public String getName() {
         return name;
     }
 
-    public List<Seat> getSeats() {
-        return seats;
+    public Integer getSeatsCount() {
+        return seatsCount;
+    }
+
+    public List<Integer> getVipSeats() {
+        return vipSeats;
+    }
+
+    public void setVipSeats(final List<Integer> vipSeats) {
+        this.vipSeats = vipSeats;
     }
 
     @Override

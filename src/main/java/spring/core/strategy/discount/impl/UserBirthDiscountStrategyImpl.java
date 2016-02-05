@@ -1,8 +1,9 @@
-package spring.core.strategy.discount;
+package spring.core.strategy.discount.impl;
 
 import spring.core.data.Discount;
 import spring.core.data.Event;
 import spring.core.data.User;
+import spring.core.strategy.discount.DiscountStrategy;
 
 import java.util.Date;
 

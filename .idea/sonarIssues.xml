@@ -23,6 +23,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/resources/auditorium.csv">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/App.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumLoaderInt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/AuditoriumToEventRelation.java">
           <value>
             <set />
@@ -48,7 +73,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AuditoriumLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/SpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/AuditoriumCsvFileReader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/CsvFileReader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/AuditoriumLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/AuditoriumLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.java">
           <value>
             <set />
           </value>
@@ -234,6 +309,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/facade/impl/UserFacadeImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/loader/AuditoriumLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/loader/AuditoriumLoaderImpl.java">
           <value>
             <set />
           </value>

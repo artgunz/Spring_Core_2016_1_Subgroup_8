@@ -1,7 +1,6 @@
 package spring.core.service.impl;
 
 import spring.core.dao.TicketsDAO;
-import spring.core.data.Auditorium;
 import spring.core.data.Event;
 import spring.core.data.Price;
 import spring.core.data.Seat;
@@ -10,7 +9,6 @@ import spring.core.data.User;
 import spring.core.service.AuditoriumService;
 import spring.core.service.BookingService;
 import spring.core.service.DiscountService;
-import spring.core.service.TicketService;
 
 import java.util.Date;
 import java.util.List;
@@ -18,6 +16,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Service
 public class BookingServiceImpl implements BookingService {
 
     @Autowired
@@ -45,12 +44,17 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public void bookTicket(final User user, final Ticket ticket) {
+    public void bookTicket(final User user, final Ticket ticket) { //TODO add validator interceptor to handle "Already booked ticket"
         ticketsDAO.addTicket(user, ticket);
     }
 
     @Override
     public List<Ticket> getTicketsForEvent(final Event event, final Date date) {
         return ticketsDAO.getAllTickets(event, date);
+    }
+
+    @Override
+    public List<Ticket> getTicketsForUser(final User user) {
+        return ticketsDAO.getTicketsForUser(user);
     }
 }

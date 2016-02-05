@@ -43,4 +43,9 @@ public class HashMapTicketsDAOImpl implements TicketsDAO {
 
         return ticketsForEventAndDate;
     }
+
+    @Override
+    public List<Ticket> getTicketsForUser(User user){
+        return ticketStorage.get(user);
+    }
 }

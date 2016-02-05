@@ -4,10 +4,9 @@ import spring.core.data.Ticket;
 import spring.core.data.User;
 import spring.core.data.UserRegistrationInformation;
 import spring.core.facade.UserFacade;
-import spring.core.service.TicketService;
+import spring.core.service.BookingService;
 import spring.core.service.UserService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class UserFacadeImpl implements UserFacade {
     UserService userService;
 
     @Autowired
-    TicketService ticketService;
+    BookingService bookingService;
 
     public User register(final UserRegistrationInformation registrationInformation) {
         return userService.register(registrationInformation);
@@ -42,16 +41,10 @@ public class UserFacadeImpl implements UserFacade {
         return userService.getUsersByName(name);
     }
 
+    @Override
     public List<Ticket> getBookedTickets(final User user) {
-        final List<Ticket> tickets = new ArrayList<Ticket>();
-
-        final List<Ticket> allTicketList = ticketService.getTicketList();
-        for(final Ticket ticket : allTicketList){
-            if (ticket.getUser().equals(user)){
-                tickets.add(ticket);
-            }
-        }
-
-        return tickets;
+        return bookingService.getTicketsForUser(user);
     }
+
+
 }

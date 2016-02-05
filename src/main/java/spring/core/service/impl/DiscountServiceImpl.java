@@ -9,11 +9,15 @@ import spring.core.strategy.discount.DiscountStrategy;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class DiscountServiceImpl implements DiscountService {
 
-    @Autowired
+    @Resource(name = "discountStrategyList")
     List<DiscountStrategy> discountStrategyList; //TODO autowire it
 
     @Override

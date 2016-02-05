@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserIdGeneratorStrategy {
     public Long generateId(){
-        return RandomUtils.nextLong(254680339, 3495050);
+        return RandomUtils.nextLong(3495050, 254680339);
     }
 }
