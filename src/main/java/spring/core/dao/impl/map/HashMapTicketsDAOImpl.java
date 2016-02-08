@@ -2,7 +2,9 @@ package spring.core.dao.impl.map;
 
 import spring.core.dao.TicketsDAO;
 import spring.core.data.Event;
+import spring.core.data.ShowEvent;
 import spring.core.data.Ticket;
+import spring.core.data.TicketCreationInformation;
 import spring.core.data.User;
 
 import java.util.ArrayList;
@@ -22,6 +24,11 @@ public class HashMapTicketsDAOImpl implements TicketsDAO {
     @Override
     public Ticket addTicket(User user, Ticket ticket) {
         List<Ticket> ticketsForUser = ticketStorage.get(user);
+
+        if(ticketsForUser == null){
+            ticketsForUser = new ArrayList<>();
+            ticketStorage.put(user, ticketsForUser);
+        }
 
         ticketsForUser.add(ticket);
 

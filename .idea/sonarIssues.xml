@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.regexp">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
           <value>
             <set />
@@ -24,6 +29,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/resources/auditorium.csv">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/log4j2.xml">
           <value>
             <set />
           </value>
@@ -88,6 +98,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/TestSpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv.java">
           <value>
             <set />
@@ -124,6 +139,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/loader/auditorium/impl/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/CsvFileReader.java">
           <value>
             <set />
           </value>
@@ -248,6 +268,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/TicketCreationInformation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Tiket.java">
           <value>
             <set />
@@ -284,6 +309,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/user/search/UserSearchInformation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/exception/ElementNotFoundException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/exception/EventAlreadyExists.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/exception/EventAlreadyExistsException.java">
           <value>
             <set />
           </value>
@@ -428,7 +468,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/strategy/discount/impl/UserTicketsBoughtDiscountStrategyImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/spring/core/SpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/spring/core/service/impl/AuditoriumServiceImplTest.java">
           <value>
             <set />
           </value>

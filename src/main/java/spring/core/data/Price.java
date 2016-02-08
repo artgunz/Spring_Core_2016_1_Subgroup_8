@@ -1,5 +1,7 @@
 package spring.core.data;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 public class Price {
     final Currency currency;
     final Double value;
@@ -15,5 +17,13 @@ public class Price {
 
     public Double getValue() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("currency", currency)
+                .append("value", value)
+                .toString();
     }
 }

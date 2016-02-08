@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
 public class ShowEvent{
@@ -51,5 +52,14 @@ public class ShowEvent{
                 .append(auditorium)
                 .append(showTime)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("event", event)
+                .append("auditorium", auditorium)
+                .append("showTime", showTime)
+                .toString();
     }
 }

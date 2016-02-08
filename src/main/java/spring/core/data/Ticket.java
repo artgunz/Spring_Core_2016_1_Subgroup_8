@@ -2,6 +2,7 @@ package spring.core.data;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Ticket {
     final ShowEvent showEvent;
@@ -44,5 +45,13 @@ public class Ticket {
                 .append(showEvent)
                 .append(seat)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("showEvent", showEvent)
+                .append("seat", seat)
+                .toString();
     }
 }

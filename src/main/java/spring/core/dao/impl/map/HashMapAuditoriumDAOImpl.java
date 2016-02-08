@@ -11,11 +11,15 @@ import java.util.Set;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository("hashMapAuditoriumDAO")
 public class HashMapAuditoriumDAOImpl implements AuditoriumDAO {
+    private static final Logger LOGGER = LogManager.getLogger(HashMapAuditoriumDAOImpl.class);
+
     private final static Set<Auditorium> auditoriumStorage = new HashSet<>();
 
     @Autowired
@@ -25,6 +29,8 @@ public class HashMapAuditoriumDAOImpl implements AuditoriumDAO {
     public Auditorium searchAuditoriumByName(final String name) {
         for (final Auditorium auditorium : auditoriumStorage) {
             if (auditorium.getName().equals(name)) {
+                LOGGER.debug("Founded auditorium = {}....", auditorium);
+
                 return auditorium;
             }
         }
@@ -36,18 +42,28 @@ public class HashMapAuditoriumDAOImpl implements AuditoriumDAO {
     public List<Auditorium> getAuditoriums() {
         final List<Auditorium> mainList = new ArrayList<>();
         mainList.addAll(auditoriumStorage);
+
+        LOGGER.debug("Founded auditoriums = {}....", mainList);
+
         return mainList;
     }
 
     @Override
     public Auditorium addAuditorium(final Auditorium auditorium) {
+        LOGGER.debug("Adding auditorium = {}....", auditorium);
+
         auditoriumStorage.add(auditorium);
         return auditorium;
     }
 
     @PostConstruct
     public void readDB() {
-        System.out.println("Loading auditoriums....");
-        auditoriumStorage.addAll(auditoriumLoader.loadAuditoriumList());
+        LOGGER.debug("Loading auditoriums....");
+
+        for (Auditorium auditorium: auditoriumLoader.loadAuditoriumList()){
+            addAuditorium(auditorium);
+        }
+
+        LOGGER.info("Loaded {} auditoriums....", auditoriumStorage.size());
     }
 }

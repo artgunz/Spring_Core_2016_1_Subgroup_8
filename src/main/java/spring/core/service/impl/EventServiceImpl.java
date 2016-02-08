@@ -5,6 +5,7 @@ import spring.core.data.Auditorium;
 import spring.core.data.Event;
 import spring.core.data.EventCreationInformation;
 import spring.core.data.ShowEvent;
+import spring.core.exception.EventAlreadyExistsException;
 import spring.core.service.EventService;
 
 import java.util.ArrayList;
@@ -49,21 +50,37 @@ public class EventServiceImpl implements EventService {
         return listEvents;
     }
 
-    public List<Event> getNextEvents(final Date tillDate) {
+    public List<ShowEvent> getNextEvents(final Date tillDate) {
         Date current = new Date();
-        List<Event> listEvents = new ArrayList<Event>();
+        List<ShowEvent> listEvents = new ArrayList<>();
 
         for(ShowEvent event: eventDAO.getAllShows()){
             Date showTime = event.getShowTime();
             if(showTime.after(current) && showTime.before(tillDate)){
-                listEvents.add(event.getEvent());
+                listEvents.add(event);
             }
         }
 
         return listEvents;
     }
 
-    public void assignAuditorium(final Event event, final Auditorium auditorium, final Date date) {
+    @Override
+    public List<ShowEvent> getNextEventsByName(final Date tillDate, final String eventName) {
+        Date current = new Date();
+        List<ShowEvent> listEvents = new ArrayList<>();
+
+        for(ShowEvent event: eventDAO.getAllShows()){
+            Date showTime = event.getShowTime();
+            if(showTime.after(current) && event.getEvent().getName().equals(eventName)){
+                listEvents.add(event);
+            }
+        }
+
+        return listEvents;
+    }
+
+    @Override
+    public ShowEvent assignAuditoriumAndDate(final Event event, final Auditorium auditorium, final Date date) throws EventAlreadyExistsException {
         ShowEvent foundedEvent = null;
 
         for(final ShowEvent searchEvent: eventDAO.getAllShows()){
@@ -74,12 +91,13 @@ public class EventServiceImpl implements EventService {
         }
 
         if(foundedEvent!=null){
-            System.out.println("Event Already in base");
-            return;
+            throw new EventAlreadyExistsException("Event Already in base");
         }
 
         final ShowEvent showEvent = new ShowEvent(event, auditorium, date);
 
         eventDAO.addShowEvent(showEvent);
+
+        return showEvent;
     }
 }

@@ -1,32 +1,122 @@
 package spring.core;
 
 import spring.core.configuration.SpringConfiguration;
+import spring.core.data.Auditorium;
+import spring.core.data.Currency;
+import spring.core.data.Event;
+import spring.core.data.EventCreationInformation;
+import spring.core.data.Price;
+import spring.core.data.Rating;
+import spring.core.data.Seat;
+import spring.core.data.ShowEvent;
+import spring.core.data.TicketCreationInformation;
+import spring.core.data.User;
 import spring.core.data.UserRegistrationInformation;
+import spring.core.data.UserTicket;
 import spring.core.facade.UserFacade;
-import spring.core.facade.impl.UserFacadeImpl;
 import spring.core.service.AuditoriumService;
+import spring.core.service.BookingService;
+import spring.core.service.EventService;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.env.AbstractEnvironment;
 
 public class App
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    private static final Logger LOGGER = LogManager.getLogger(App.class);
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+    ApplicationContext context;
 
-        UserFacade userFacade = context.getBean(UserFacadeImpl.class);
+    public static void main( String[] args ) throws ParseException {
+        App app = new App();
+        app.init();
 
-        UserRegistrationInformation userRegistrationInformation = new UserRegistrationInformation();
-        userRegistrationInformation.setUserName("User");
-        userRegistrationInformation.setUserEmail("email@email.ua");
+        Event event = app.registerEvent("DEADPOOL", 10.99, Rating.HIGH);
 
-        userFacade.register(userRegistrationInformation);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        Date date = simpleDateFormat.parse("14-02-2016 10:55:00");
+        ShowEvent showEvent = app.registerShowEvent("DEADPOOL", "XXX", date);
+
+        User user = app.registerUser("User", "email@email.ua");
+
+        UserTicket userTicket = app.registerTicketForFirstAvailableTime(user, "DEADPOOL");
+    }
+
+    public void init(){
+        System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "dev");
+        context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 
         AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
-        auditoriumService.getAuditoriums();
-        auditoriumService.getVipSeats("Red");
+    }
+
+    public Event registerEvent(String eventName, Double eventPrice, Rating eventRating){
+        EventCreationInformation eventCreationInformation = new EventCreationInformation();
+        eventCreationInformation.setRating(eventRating);
+        eventCreationInformation.setBasePrice(new Price(Currency.USD, eventPrice));
+        eventCreationInformation.setName(eventName);
+
+        EventService eventService = context.getBean(EventService.class);
+
+        Event event = eventService.create(eventCreationInformation);
+        return event;
+    }
+
+    public ShowEvent registerShowEvent(String eventName, String auditoriumName, Date showTime){
+        ShowEvent showEvent = null;
+
+        EventService eventService = context.getBean(EventService.class);
+        Event event = eventService.getByName(eventName);
+
+        AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
+        Auditorium auditorium = auditoriumService.searchAuditoriumByName(auditoriumName);
+
+       showEvent = eventService.assignAuditoriumAndDate(event, auditorium, showTime);
+
+        return showEvent;
+    }
+
+    public UserTicket registerTicketForFirstAvailableTime(User user, String eventName){
+        EventService eventService = context.getBean(EventService.class);
+
+        List<ShowEvent> showEventList = eventService.getNextEventsByName(new Date(), eventName);
+
+        ShowEvent showEvent = showEventList.get(0);
+
+        TicketCreationInformation ticketCreationInformation = new TicketCreationInformation();
+        ticketCreationInformation.setShowEvent(showEvent);
+        ticketCreationInformation.setSeat(new Seat(showEvent.getAuditorium(), 5));
+
+        BookingService bookingService = context.getBean(BookingService.class);
+        UserTicket userTicket = bookingService.bookTicket(user, ticketCreationInformation);
+
+        return userTicket;
+    }
+
+    private User registerUser(String userName, String userEmail){
+        UserFacade userFacade = context.getBean(UserFacade.class);
+
+        UserRegistrationInformation userRegistrationInformation = new UserRegistrationInformation();
+        userRegistrationInformation.setUserName(userName);
+        userRegistrationInformation.setUserEmail(userEmail);
+
+        User user = userFacade.register(userRegistrationInformation);
+
+        return user;
+    }
+
+    public ApplicationContext getContext() {
+        return context;
+    }
+
+    public void setContext(final ApplicationContext context) {
+        this.context = context;
     }
 }

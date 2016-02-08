@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class Seat {
     final Auditorium auditorium;
     final Integer id;
-    Double priceIncrement = 1.0;
+    Double priceIncrement;
 
     public Seat(final Auditorium auditorium, final Integer id) {
         this.auditorium = auditorium;
@@ -18,11 +18,13 @@ public class Seat {
     }
 
     public Double getPriceIncrement() {
-        return priceIncrement;
-    }
+        if(priceIncrement ==null && getAuditorium().getVipSeats().contains(getId())){
+            this.priceIncrement = 1.5;
+        }else{
+            priceIncrement = 1.0;
+        }
 
-    public void setPriceIncrement(final Double priceIncrement) {
-        this.priceIncrement = priceIncrement;
+        return priceIncrement;
     }
 
     public Auditorium getAuditorium() {

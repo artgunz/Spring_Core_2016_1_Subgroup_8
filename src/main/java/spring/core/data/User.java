@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class User {
     Long id;
@@ -74,5 +75,16 @@ public class User {
                 .append(name)
                 .append(email)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("name", name)
+                .append("email", email)
+                .append("birthDate", birthDate)
+                .append("userStatistic", userStatistic)
+                .toString();
     }
 }

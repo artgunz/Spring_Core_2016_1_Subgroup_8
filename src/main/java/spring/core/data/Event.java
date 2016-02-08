@@ -1,12 +1,8 @@
 package spring.core.data;
 
-import java.util.Date;
-import java.util.List;
-
-import com.sun.istack.internal.Nullable;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Event {
     final String name;
@@ -49,5 +45,14 @@ public class Event {
         return new HashCodeBuilder(17, 37)
                 .append(name)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("name", name)
+                .append("basePrice", basePrice)
+                .append("rating", rating)
+                .toString();
     }
 }

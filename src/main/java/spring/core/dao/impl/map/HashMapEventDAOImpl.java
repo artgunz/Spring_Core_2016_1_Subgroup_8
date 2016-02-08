@@ -21,7 +21,8 @@ public class HashMapEventDAOImpl implements EventDAO {
     private final static Set<ShowEvent> showEventStorage = new HashSet<ShowEvent>();
 
     public Event createEvent(final EventCreationInformation eventCreationInformation) {
-        final Event event = new Event(eventCreationInformation.getName(), eventCreationInformation.getBasePrice(), eventCreationInformation.getRating());
+        Event event = new Event(eventCreationInformation.getName(), eventCreationInformation.getBasePrice(), eventCreationInformation.getRating());
+        eventStorage.add(event);
         return event;
     }
 
@@ -58,4 +59,5 @@ public class HashMapEventDAOImpl implements EventDAO {
     public void addShowEvent(ShowEvent showEvent) {
         showEventStorage.add(showEvent);
     }
+
 }
