@@ -83,6 +83,136 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/AOPHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/Countable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/CountableHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/CounterAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/DefaultCounterAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/EventCounterAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/Handler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/annotation/Countable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/annotation/EventName.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/annotation/Loggable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/DefaultCounterAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/LoggerAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/BookingAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/DefaultCounterAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/EventAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/CountableHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/CountableMethodHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/Handler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/data/CountedData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/data/CountedEventMethodData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/data/CountedMethodData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/impl/CountableHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/impl/DefaultCountableMethodHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/handler/impl/SimpleHashMapCountableHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/helper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AuditoriumLoader.java">
           <value>
             <set />
@@ -489,6 +619,46 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctccore/testsrc/ca/canadiantire/core/model/attribute/handler/TransientOrderBooleanAttributeHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/beans/OrderLineGroup.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/OrderLineGroupsEditor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/pack/PackerOrderLineGroupsEditor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/pickup/PickuperOrderLineGroupsEditor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/section/AutomotiveViewSectionRenderer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/section/GeneralMerchandiseViewSectionRenderer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/testsrc/ca/canadiantire/ctcpickpack/components/editorarea/pack/PackerOrderLineGroupsEditorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/testsrc/ca/canadiantire/ctcpickpack/components/editorarea/pickup/PickuperOrderLineGroupsEditorTest.java">
           <value>
             <set />
           </value>

@@ -73,7 +73,11 @@ public class App
         ShowEvent showEvent = null;
 
         EventService eventService = context.getBean(EventService.class);
-        Event event = eventService.getByName(eventName);
+
+        Event event =  null;
+        for(int i=0; i<=10; i++){
+            event  = eventService.getByName(eventName);
+        }
 
         AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
         Auditorium auditorium = auditoriumService.searchAuditoriumByName(auditoriumName);

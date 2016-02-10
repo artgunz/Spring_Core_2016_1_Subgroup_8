@@ -33,6 +33,7 @@ public class HashMapEventDAOImpl implements EventDAO {
 
     }
 
+    @Override
     public Event searchEventByName(final String eventName) {
         for (final Event event : eventStorage) {
             if (event.getName().equals(eventName)) {

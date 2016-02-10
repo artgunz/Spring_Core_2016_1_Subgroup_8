@@ -1,5 +1,8 @@
 package spring.core.service.impl;
 
+import spring.core.aop.annotation.Countable;
+import spring.core.aop.annotation.Loggable;
+import spring.core.aop.handler.impl.DefaultCountableMethodHandler;
 import spring.core.dao.TicketsDAO;
 import spring.core.data.Event;
 import spring.core.data.Price;
@@ -52,6 +55,8 @@ public class BookingServiceImpl implements BookingService {
         return new Price(basePrice.getCurrency(), basePriceDouble);
     }
 
+    @Loggable
+    @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
     public UserTicket bookTicket(final User user, final TicketCreationInformation ticketCreationInformation) { //TODO add validator interceptor to handle "Already booked ticket"
         Price price = getTicketPrice(ticketCreationInformation.getShowEvent().getEvent(),
@@ -69,8 +74,6 @@ public class BookingServiceImpl implements BookingService {
 
         userStatistic.setTicketsNumber(userStatistic.getTicketsNumber()+1);
         user.setUserStatistic(userStatistic);
-
-        LOGGER.info("Booked ticket {}", userTicket);
 
         return userTicket;
     }

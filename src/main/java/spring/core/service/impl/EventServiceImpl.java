@@ -1,5 +1,9 @@
 package spring.core.service.impl;
 
+import spring.core.aop.annotation.Countable;
+import spring.core.aop.annotation.EventName;
+import spring.core.aop.annotation.Loggable;
+import spring.core.aop.handler.impl.DefaultCountableMethodHandler;
 import spring.core.dao.EventDAO;
 import spring.core.data.Auditorium;
 import spring.core.data.Event;
@@ -17,32 +21,38 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EventServiceImpl implements EventService {
-
     @Autowired
     EventDAO eventDAO;
 
+    @Override
     public Event create(final EventCreationInformation creationInformation) {
         return eventDAO.createEvent(creationInformation);
     }
 
+    @Override
     public void remove(final Event event) {
         eventDAO.deleteEvent(event);
     }
 
-    public Event getByName(final String name) {
-        return eventDAO.searchEventByName(name);
+    @Loggable
+    @Countable(handler = DefaultCountableMethodHandler.class)
+    @Override
+    public Event getByName(@EventName final String eventName) {
+        return eventDAO.searchEventByName(eventName);
     }
 
+    @Override
     public List<Event> getAll() {
         return eventDAO.getAllEvents();
     }
 
+    @Override
     public List<Event> getForDateRange(final Date fromDate, final Date tillDate) {
-        List<Event> listEvents = new ArrayList<Event>();
+        List<Event> listEvents = new ArrayList<>();
 
-        for(ShowEvent event: eventDAO.getAllShows()){
+        for (ShowEvent event : eventDAO.getAllShows()) {
             Date showTime = event.getShowTime();
-            if( showTime.after(fromDate) && showTime.before(tillDate)){
+            if (showTime.after(fromDate) && showTime.before(tillDate)) {
                 listEvents.add(event.getEvent());
             }
         }
@@ -50,13 +60,14 @@ public class EventServiceImpl implements EventService {
         return listEvents;
     }
 
+    @Override
     public List<ShowEvent> getNextEvents(final Date tillDate) {
         Date current = new Date();
         List<ShowEvent> listEvents = new ArrayList<>();
 
-        for(ShowEvent event: eventDAO.getAllShows()){
+        for (ShowEvent event : eventDAO.getAllShows()) {
             Date showTime = event.getShowTime();
-            if(showTime.after(current) && showTime.before(tillDate)){
+            if (showTime.after(current) && showTime.before(tillDate)) {
                 listEvents.add(event);
             }
         }
@@ -64,14 +75,16 @@ public class EventServiceImpl implements EventService {
         return listEvents;
     }
 
+    @Loggable
+    @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public List<ShowEvent> getNextEventsByName(final Date tillDate, final String eventName) {
+    public List<ShowEvent> getNextEventsByName(final Date tillDate, @EventName final String eventName) {
         Date current = new Date();
         List<ShowEvent> listEvents = new ArrayList<>();
 
-        for(ShowEvent event: eventDAO.getAllShows()){
+        for (ShowEvent event : eventDAO.getAllShows()) {
             Date showTime = event.getShowTime();
-            if(showTime.after(current) && event.getEvent().getName().equals(eventName)){
+            if (showTime.after(current) && event.getEvent().getName().equals(eventName)) {
                 listEvents.add(event);
             }
         }
@@ -80,17 +93,19 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public ShowEvent assignAuditoriumAndDate(final Event event, final Auditorium auditorium, final Date date) throws EventAlreadyExistsException {
+    public ShowEvent assignAuditoriumAndDate(final Event event, final Auditorium auditorium, final Date date) throws
+            EventAlreadyExistsException {
         ShowEvent foundedEvent = null;
 
-        for(final ShowEvent searchEvent: eventDAO.getAllShows()){
-            if(searchEvent.getEvent().equals(event) && searchEvent.getAuditorium().equals(auditorium) && searchEvent.getShowTime().equals(date)){
+        for (final ShowEvent searchEvent : eventDAO.getAllShows()) {
+            if (searchEvent.getEvent().equals(event) && searchEvent.getAuditorium().equals(auditorium) && searchEvent
+                    .getShowTime().equals(date)) {
                 foundedEvent = searchEvent;
                 break;
             }
         }
 
-        if(foundedEvent!=null){
+        if (foundedEvent != null) {
             throw new EventAlreadyExistsException("Event Already in base");
         }
 
