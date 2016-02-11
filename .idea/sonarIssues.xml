@@ -138,6 +138,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/annotation/LoggableAround.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/DefaultCounterAspect.java">
           <value>
             <set />
@@ -153,12 +158,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/DefaultAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/DefaultCounterAspect.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/DefaultLoggerAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/EventAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/aop/aspect/impl/EventUserLuckyAspect.java">
           <value>
             <set />
           </value>
@@ -628,12 +648,27 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/composer/CancelProductComposer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/OrderEditorSectionRenderer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/OrderLineGroupsEditor.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/pack/PackerOrderLineGroupsEditor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/components/editorarea/pack/PrintedOrderLinesListitemRenderer.java">
           <value>
             <set />
           </value>

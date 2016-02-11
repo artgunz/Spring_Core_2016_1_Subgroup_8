@@ -48,6 +48,9 @@ public class App
         User user = app.registerUser("User", "email@email.ua");
 
         UserTicket userTicket = app.registerTicketForFirstAvailableTime(user, "DEADPOOL");
+
+        BookingService bookingService = app.getContext().getBean(BookingService.class);
+        bookingService.getTicketsForUser(user);
     }
 
     public void init(){
@@ -99,7 +102,10 @@ public class App
         ticketCreationInformation.setSeat(new Seat(showEvent.getAuditorium(), 5));
 
         BookingService bookingService = context.getBean(BookingService.class);
-        UserTicket userTicket = bookingService.bookTicket(user, ticketCreationInformation);
+        Price price = bookingService.getTicketPrice(ticketCreationInformation.getShowEvent().getEvent(),
+                ticketCreationInformation.getShowEvent().getShowTime(),
+                ticketCreationInformation.getSeat(), user);
+        UserTicket userTicket = bookingService.bookTicket(user, price, ticketCreationInformation);
 
         return userTicket;
     }

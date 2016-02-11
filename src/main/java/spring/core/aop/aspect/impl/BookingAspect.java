@@ -7,7 +7,14 @@ import spring.core.aop.aspect.CounterAspect;
 import spring.core.aop.aspect.LoggerAspect;
 import spring.core.aop.handler.CountableMethodHandler;
 import spring.core.aop.handler.data.CountedEventMethodData;
+import spring.core.data.Currency;
+import spring.core.data.Event;
+import spring.core.data.Price;
 import spring.core.data.TicketCreationInformation;
+import spring.core.data.User;
+import spring.core.data.UserStatistic;
+
+import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -38,7 +45,8 @@ public class BookingAspect implements CounterAspect, LoggerAspect {
 
     @Before("inBookingService() && @annotation(countable) && methodWithTicketCreationInformationParameter()")
     public void beforeBookingServiceCountableMethod(JoinPoint point, Countable countable) {
-        TicketCreationInformation ticketCreationInformation = (TicketCreationInformation) AOPHelper.getArgWithType(point, TicketCreationInformation.class);
+        TicketCreationInformation ticketCreationInformation = (TicketCreationInformation) AOPHelper.getArgWithType
+                (point, TicketCreationInformation.class);
 
         String methodName = point.getSignature().getName();
 
@@ -49,9 +57,11 @@ public class BookingAspect implements CounterAspect, LoggerAspect {
         countableHandler.handle(new CountedEventMethodData(methodName, eventName));
     }
 
-    @After("inBookingService() && @annotation(countable) && @annotation(loggable) && methodWithTicketCreationInformationParameter()")
+    @After("inBookingService() && @annotation(countable) && @annotation(loggable) && " +
+            "methodWithTicketCreationInformationParameter()")
     public void afterBookingServiceCountableMethod(JoinPoint point, Countable countable, Loggable loggable) {
-        TicketCreationInformation ticketCreationInformation = (TicketCreationInformation) AOPHelper.getArgWithType(point, TicketCreationInformation.class);
+        TicketCreationInformation ticketCreationInformation = (TicketCreationInformation) AOPHelper.getArgWithType
+                (point, TicketCreationInformation.class);
 
         String methodName = point.getSignature().getName();
 
@@ -62,45 +72,22 @@ public class BookingAspect implements CounterAspect, LoggerAspect {
 
         Integer count = countableHandler.getCount(new CountedEventMethodData(methodName, eventName));
 
-        LOGGER.info("Event {} for method {} accessed {} times!",  ticketCreationInformation.getShowEvent().getEvent().getName(), methodName, count);
+        LOGGER.info("Event {} for method {} accessed {} times!", ticketCreationInformation.getShowEvent().getEvent()
+                .getName(), methodName, count);
     }
 
-    @Around(value = "inBookingService() && @annotation(loggable)")
-    public void aroundBookingServiceLoggableMethod(ProceedingJoinPoint proceedingJoinPoint, Loggable loggable) {
-        final Logger LOGGER = LogManager.getLogger(proceedingJoinPoint.getTarget().getClass());
+    @After("inBookingService() && execution(* *.bookTicket(.., spring.core.data.User, ..))")
+    public void countBookedUserTicket(JoinPoint joinPoint) throws Throwable {
+        User user = AOPHelper.getArgWithType(joinPoint, User.class);
+        assert user != null;
 
-        String methodName = proceedingJoinPoint.getSignature().getName();
-
-        LOGGER.info("Entering {} method...", methodName);
-
-        Object result = null;
-
-        try {
-            result = proceedingJoinPoint.proceed();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
+        UserStatistic userStatistic = user.getUserStatistic();
+        if (userStatistic == null) {
+            userStatistic = new UserStatistic();
+            user.setUserStatistic(userStatistic);
         }
 
-        LOGGER.info("Exiting {} method with result {}", methodName, result);
+        userStatistic.setTicketsNumber(userStatistic.getTicketsNumber() + 1);
     }
 
-
-//    @Around(value = "inBookingService() && @annotation(loggable)")
-//    public void aroundBookingServiceLoggableMethod2(ProceedingJoinPoint proceedingJoinPoint, Loggable loggable) {
-//        final Logger LOGGER = LogManager.getLogger(proceedingJoinPoint.getTarget().getClass());
-//
-//        String methodName = proceedingJoinPoint.getSignature().getName();
-//
-//        LOGGER.info("Entering {} method2...", methodName);
-//
-//        Object result = null;
-//
-//        try {
-//            result = proceedingJoinPoint.proceed();
-//        } catch (Throwable throwable) {
-//            throwable.printStackTrace();
-//        }
-//
-//        LOGGER.info("Exiting {} method with result2 {}", methodName, result);
-//    }
 }

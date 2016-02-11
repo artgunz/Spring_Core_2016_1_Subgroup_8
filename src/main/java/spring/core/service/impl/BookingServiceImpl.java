@@ -2,6 +2,7 @@ package spring.core.service.impl;
 
 import spring.core.aop.annotation.Countable;
 import spring.core.aop.annotation.Loggable;
+import spring.core.aop.annotation.LoggableAround;
 import spring.core.aop.handler.impl.DefaultCountableMethodHandler;
 import spring.core.dao.TicketsDAO;
 import spring.core.data.Event;
@@ -38,6 +39,7 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     TicketsDAO ticketsDAO;
 
+    @LoggableAround
     @Override
     public Price getTicketPrice(final Event event, final Date date, final Seat seat, final User user) {
         Price basePrice = event.getBasePrice();
@@ -58,22 +60,10 @@ public class BookingServiceImpl implements BookingService {
     @Loggable
     @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public UserTicket bookTicket(final User user, final TicketCreationInformation ticketCreationInformation) { //TODO add validator interceptor to handle "Already booked ticket"
-        Price price = getTicketPrice(ticketCreationInformation.getShowEvent().getEvent(),
-                ticketCreationInformation.getShowEvent().getShowTime(),
-                ticketCreationInformation.getSeat(), user);
-
+    public UserTicket bookTicket(final User user, final Price price, final TicketCreationInformation ticketCreationInformation) {
         UserTicket userTicket = new UserTicket(ticketCreationInformation.getShowEvent(), ticketCreationInformation.getSeat(), user, price);
 
         ticketsDAO.addTicket(user, userTicket);
-
-        UserStatistic userStatistic = new UserStatistic();
-        if( user.getUserStatistic()!=null){
-            userStatistic = user.getUserStatistic();
-        }
-
-        userStatistic.setTicketsNumber(userStatistic.getTicketsNumber()+1);
-        user.setUserStatistic(userStatistic);
 
         return userTicket;
     }
@@ -83,6 +73,7 @@ public class BookingServiceImpl implements BookingService {
         return ticketsDAO.getAllTickets(event, date);
     }
 
+    @Loggable
     @Override
     public List<Ticket> getTicketsForUser(final User user) {
         return ticketsDAO.getTicketsForUser(user);

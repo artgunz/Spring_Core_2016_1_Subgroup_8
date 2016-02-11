@@ -1,10 +1,11 @@
 package spring.core.configuration;
 
 import spring.core.aop.aspect.impl.BookingAspect;
+import spring.core.aop.aspect.impl.DefaultLoggerAspect;
 import spring.core.aop.aspect.impl.EventAspect;
+import spring.core.aop.aspect.impl.EventUserLuckyAspect;
 import spring.core.csv.loader.auditorium.AuditoriumLoader;
 import spring.core.csv.loader.auditorium.impl.AuditoriumLoaderImpl;
-import spring.core.service.BookingService;
 import spring.core.strategy.discount.DiscountStrategy;
 import spring.core.strategy.discount.impl.UserBirthDiscountStrategyImpl;
 import spring.core.strategy.discount.impl.UserTicketsBoughtDiscountStrategyImpl;
@@ -58,6 +59,16 @@ public class SpringConfiguration {
     @Bean
     public BookingAspect bookingAspect() {
         return new BookingAspect();
+    }
+
+    @Bean
+    public DefaultLoggerAspect defaultAspect() {
+        return new DefaultLoggerAspect();
+    }
+
+    @Bean
+    public EventUserLuckyAspect eventUserLuckyAspect() {
+        return new EventUserLuckyAspect();
     }
 
 }
