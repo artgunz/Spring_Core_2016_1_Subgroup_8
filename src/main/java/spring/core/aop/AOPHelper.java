@@ -2,15 +2,13 @@ package spring.core.aop;
 
 import java.lang.annotation.Annotation;
 
-import com.sun.istack.internal.NotNull;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.SoftException;
 import org.aspectj.lang.reflect.MethodSignature;
 
 public final class AOPHelper {
 
-    public static Object getAnnotatedArg(@NotNull JoinPoint point, @NotNull Class<? extends Annotation>
+    public static Object getAnnotatedArg(JoinPoint point, Class<? extends Annotation>
             annotationType) {
         String methodName = point.getSignature().getName();
 
@@ -35,7 +33,7 @@ public final class AOPHelper {
         return null;
     }
 
-    public static <T> T getArgWithType(@NotNull JoinPoint point, @NotNull Class<T>
+    public static <T> T getArgWithType(JoinPoint point, Class<T>
             annotationType) {
         for (Object arg : point.getArgs()) {
             if (arg.getClass().isAssignableFrom(annotationType))
