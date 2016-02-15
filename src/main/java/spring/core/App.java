@@ -42,7 +42,7 @@ public class App
         Event event = app.registerEvent("DEADPOOL", 10.99, Rating.HIGH);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
-        Date date = simpleDateFormat.parse("14-02-2016 10:55:00");
+        Date date = simpleDateFormat.parse("14-03-2016 10:55:00");
         ShowEvent showEvent = app.registerShowEvent("DEADPOOL", "XXX", date);
 
         User user = app.registerUser("User", "email@email.ua");

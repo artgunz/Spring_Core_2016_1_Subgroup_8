@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Downloads/spring.core/spring.core/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
@@ -643,6 +648,26 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/html/FR/OrderCancelNotPickedUpPostPOS_FR_${et.mode}.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/html/FR/OrderReadyForPickup_FR_${et.mode}.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/xslt/FR/HeaderConfirmation_FR_${et.mode}.xslt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcinitialdata/resources/impex/init/init-projectdata-phase2-cronjobs.impex">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/src/ca/canadiantire/ctcpickpack/beans/OrderLineGroup.java">
           <value>
             <set />
@@ -694,6 +719,11 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/testsrc/ca/canadiantire/ctcpickpack/components/editorarea/pickup/PickuperOrderLineGroupsEditorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcpickpack/web/webroot/ctcpickpack/css/ctcpickpack.css">
           <value>
             <set />
           </value>
