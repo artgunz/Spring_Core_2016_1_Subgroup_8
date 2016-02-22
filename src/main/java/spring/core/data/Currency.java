@@ -1,5 +1,5 @@
 package spring.core.data;
 
 public enum Currency {
-    USD,EUR;
+    USD, EUR;
 }

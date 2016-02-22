@@ -26,13 +26,13 @@ public class AuditoriumServiceImpl implements AuditoriumService {
     }
 
     @Override
-    public Integer getSeatsNumber(final String auditoriumName) throws ElementNotFoundException{
-        for (Auditorium auditorium: getAuditoriums()
+    public Integer getSeatsNumber(final String auditoriumName) throws ElementNotFoundException {
+        for (Auditorium auditorium : getAuditoriums()
                 ) {
-            if(auditorium.getName().equals(auditoriumName)){
+            if (auditorium.getName().equals(auditoriumName)) {
                 Integer count = auditorium.getSeatsCount();
 
-                LOGGER.debug("Auditorium {} has {} seats",auditoriumName, count);
+                LOGGER.debug("Auditorium {} has {} seats", auditoriumName, count);
 
                 return count;
             }
@@ -43,12 +43,12 @@ public class AuditoriumServiceImpl implements AuditoriumService {
 
     @Override
     public List<Integer> getVipSeats(final String auditoriumName) throws ElementNotFoundException {
-        for (Auditorium auditorium: getAuditoriums()
-             ) {
-            if(auditorium.getName().equals(auditoriumName)){
+        for (Auditorium auditorium : getAuditoriums()
+                ) {
+            if (auditorium.getName().equals(auditoriumName)) {
                 List<Integer> vipSeats = auditorium.getVipSeats();
 
-                LOGGER.debug("Auditorium {} has {} vip seats",auditoriumName, vipSeats);
+                LOGGER.debug("Auditorium {} has {} vip seats", auditoriumName, vipSeats);
 
                 return vipSeats;
             }

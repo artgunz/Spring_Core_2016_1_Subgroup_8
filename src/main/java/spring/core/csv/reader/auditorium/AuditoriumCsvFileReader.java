@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class AuditoriumCsvFileReader extends CsvFileReader<Auditorium> {
     private static final String[] FILE_HEADER_MAPPING = {"NAME", "SEATS", "VIP_SEATS"};
 
-    protected List<Auditorium> readInternal(List<CSVRecord> csvRecords){
+    protected List<Auditorium> readInternal(List<CSVRecord> csvRecords) {
         List<Auditorium> students = new ArrayList<>();
 
         for (int i = 1; i < csvRecords.size(); i++) {
@@ -34,12 +34,12 @@ public class AuditoriumCsvFileReader extends CsvFileReader<Auditorium> {
         return students;
     }
 
-    private List<Integer> readVipSeats(CSVRecord record){
+    private List<Integer> readVipSeats(CSVRecord record) {
         String vipSeatsAsString = record.get(FILE_HEADER_MAPPING[2]);
         String vipSeatsAsStringA[] = vipSeatsAsString.split(",");
         List<Integer> vipSeatsList = new ArrayList<>();
 
-        for(int i = 0; i<vipSeatsAsStringA.length; i++){
+        for (int i = 0; i < vipSeatsAsStringA.length; i++) {
             String seat = vipSeatsAsStringA[i];
             vipSeatsList.add(Integer.valueOf(seat.trim()));
         }

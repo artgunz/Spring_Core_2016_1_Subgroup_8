@@ -2,7 +2,7 @@ package spring.core.data;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Price extends Item {
+public class Price {
     final Currency currency;
     final Double value;
 

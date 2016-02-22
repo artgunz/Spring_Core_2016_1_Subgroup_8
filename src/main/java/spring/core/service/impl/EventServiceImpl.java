@@ -27,7 +27,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event create(final EventCreationInformation creationInformation) throws Exception {
         Event eventSearch = eventDAO.searchEventByName(creationInformation.getName());
-        if(eventSearch!=null){
+        if (eventSearch != null) {
             return eventSearch;
         }
 
@@ -83,7 +83,8 @@ public class EventServiceImpl implements EventService {
     @Loggable
     @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public List<ShowEvent> getNextEventsByName(final Date tillDate, @EventName final String eventName) throws Exception {
+    public List<ShowEvent> getNextEventsByName(final Date tillDate, @EventName final String eventName) throws
+            Exception {
         Date current = new Date();
         List<ShowEvent> listEvents = new ArrayList<>();
 

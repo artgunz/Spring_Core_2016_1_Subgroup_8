@@ -1,7 +1,5 @@
 package spring.core.data;
 
-import java.util.Date;
-
 public class TicketCreationInformation {
     ShowEvent showEvent;
     Seat seat;

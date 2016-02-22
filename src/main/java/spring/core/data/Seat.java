@@ -18,9 +18,9 @@ public class Seat {
     }
 
     public Double getPriceIncrement() {
-        if(priceIncrement ==null && getAuditorium().getVipSeats().contains(getId())){
+        if (priceIncrement == null && getAuditorium().getVipSeats().contains(getId())) {
             this.priceIncrement = 1.5;
-        }else{
+        } else {
             priceIncrement = 1.0;
         }
 

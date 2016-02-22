@@ -6,8 +6,6 @@ import spring.core.data.User;
 
 import java.util.Date;
 
-import org.springframework.stereotype.Service;
-
 public interface DiscountService {
     Discount getDiscount(User user, Event event, Date date);
 }

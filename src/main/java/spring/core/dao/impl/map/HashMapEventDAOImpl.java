@@ -4,26 +4,22 @@ import spring.core.dao.EventDAO;
 import spring.core.data.Event;
 import spring.core.data.EventCreationInformation;
 import spring.core.data.ShowEvent;
-import spring.core.populator.Populator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 @Repository("hashMapEventDAO")
-@Profile("test")
 public class HashMapEventDAOImpl implements EventDAO {
     private final static Set<Event> eventStorage = new HashSet<>();
     private final static Set<ShowEvent> showEventStorage = new HashSet<ShowEvent>();
 
     public Event createEvent(final EventCreationInformation eventCreationInformation) {
-        Event event = new Event(eventCreationInformation.getName(), eventCreationInformation.getBasePrice(), eventCreationInformation.getRating());
+        Event event = new Event(eventCreationInformation.getName(), eventCreationInformation.getBasePrice(),
+                eventCreationInformation.getRating());
         eventStorage.add(event);
         return event;
     }
@@ -39,7 +35,7 @@ public class HashMapEventDAOImpl implements EventDAO {
     public Event searchEventByName(final String eventName) {
         for (final Event event : eventStorage) {
             if (event.getName().equals(eventName)) {
-               return  event;
+                return event;
             }
         }
 

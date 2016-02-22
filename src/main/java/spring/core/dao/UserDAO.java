@@ -5,8 +5,6 @@ import spring.core.data.UserRegistrationInformation;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 public interface UserDAO {
 
     User createUser(UserRegistrationInformation registrationInformation);

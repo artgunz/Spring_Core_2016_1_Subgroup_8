@@ -533,6 +533,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/db/Item.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/user/search/UserSearchInformation.java">
           <value>
             <set />

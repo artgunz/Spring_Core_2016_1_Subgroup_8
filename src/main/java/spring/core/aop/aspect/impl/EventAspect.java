@@ -44,7 +44,8 @@ public class EventAspect implements CounterAspect, LoggerAspect {
         countableHandler.handle(new CountedEventMethodData(methodName, eventName));
     }
 
-    @After("inEventService() && @annotation(countable) && @annotation(loggable) && methodWithAnnotationOnAtLeastOneParameter()")
+    @After("inEventService() && @annotation(countable) && @annotation(loggable) && " +
+            "methodWithAnnotationOnAtLeastOneParameter()")
     public void afterEventServiceCountableMethod(JoinPoint point, Countable countable, Loggable loggable) {
         String methodName = point.getSignature().getName();
         String eventName = (String) AOPHelper.getAnnotatedArg(point, EventName.class);
@@ -53,7 +54,7 @@ public class EventAspect implements CounterAspect, LoggerAspect {
 
         Integer count = countableHandler.getCount(new CountedEventMethodData(methodName, eventName));
 
-        if(count >=10){
+        if (count >= 10) {
             LOGGER.info("Event {} for method {} accessed {} times!", eventName, methodName, count);
         }
     }

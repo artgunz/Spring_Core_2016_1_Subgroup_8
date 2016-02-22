@@ -13,6 +13,7 @@ import spring.core.data.TicketCreationInformation;
 import spring.core.data.User;
 import spring.core.data.UserRegistrationInformation;
 import spring.core.data.UserTicket;
+import spring.core.exception.EventAlreadyExistsException;
 import spring.core.facade.UserFacade;
 import spring.core.service.AuditoriumService;
 import spring.core.service.BookingService;
@@ -41,11 +42,10 @@ public class App {
         App app = new App();
         app.init();
 
-        String ratings[] = new String[]{"HIGH","LOW","NORMAL"};
-        Double pricesIncrement[] = new Double[]{1.55,2.55,4.55};
+        String ratings[] = new String[]{"HIGH", "LOW", "MID"};
 
-        String eventsNames[] = new String[]{"XXX","DEADPOOL","WALKING DEAD", "COMEDY"};
-        Double pricesEvents[] = new Double[]{2.55,3.55,5.55,8.66};
+        String eventsNames[] = new String[]{"XXX", "DEADPOOL", "WALKING DEAD", "COMEDY"};
+        Double pricesEvents[] = new Double[]{2.55, 3.55, 5.55, 8.66};
 
         String eventsShowDates[] = new String[]{
                 "18-05-2016 10:59:00",
@@ -66,14 +66,10 @@ public class App {
 
         int iterations = 10;
 
-        for(int i=0; i<=iterations; i++){
+        for (int i = 0; i <= iterations; i++) {
             int idx = new Random().nextInt(ratings.length);
             String randomRating = (ratings[idx]);
-            Double randomPriceIncrement = (pricesIncrement[idx]);
-
-            Rating rating = new Rating();
-            rating.setName(randomRating);
-            rating.setPriceIncrement(randomPriceIncrement);
+            Rating rating = Rating.valueOf(randomRating);
 
             idx = new Random().nextInt(eventsNames.length);
             String randomEventName = (eventsNames[idx]);
@@ -128,7 +124,11 @@ public class App {
         AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
         Auditorium auditorium = auditoriumService.searchAuditoriumByName(auditoriumName);
 
-        showEvent = eventService.assignAuditoriumAndDate(event, auditorium, showTime);
+        try {
+            showEvent = eventService.assignAuditoriumAndDate(event, auditorium, showTime);
+        }catch (EventAlreadyExistsException ignored){
+
+        }
 
         return showEvent;
     }
@@ -162,12 +162,12 @@ public class App {
         return userFacade.register(userRegistrationInformation);
     }
 
-    private String[] getAuditoriums(){
+    private String[] getAuditoriums() {
         AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
         List<Auditorium> auditorium = auditoriumService.getAuditoriums();
 
         List<String> auditAsString = new ArrayList<>(auditorium.size());
-        for (Auditorium auditorium1:auditorium){
+        for (Auditorium auditorium1 : auditorium) {
             auditAsString.add(auditorium1.getName());
         }
 

@@ -60,7 +60,7 @@ public class HashMapAuditoriumDAOImpl implements AuditoriumDAO {
     public void readDB() {
         LOGGER.debug("Loading auditoriums....");
 
-        for (Auditorium auditorium: auditoriumLoader.loadAuditoriumList()){
+        for (Auditorium auditorium : auditoriumLoader.loadAuditoriumList()) {
             addAuditorium(auditorium);
         }
 

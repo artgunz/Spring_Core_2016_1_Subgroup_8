@@ -1,12 +1,9 @@
 package spring.core.service;
 
-import spring.core.data.Ticket;
 import spring.core.data.User;
 import spring.core.data.UserRegistrationInformation;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
 
 public interface UserService {
 

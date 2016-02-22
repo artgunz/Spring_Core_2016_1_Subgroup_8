@@ -9,8 +9,8 @@ public class Ticket {
     final Seat seat;
 
     public Ticket(final ShowEvent showEvent, final Seat seat) {
-        if(!showEvent.getAuditorium().equals(seat.getAuditorium())){
-            throw  new IllegalArgumentException("Seat and event should belong to equal Auditorium!");
+        if (!showEvent.getAuditorium().equals(seat.getAuditorium())) {
+            throw new IllegalArgumentException("Seat and event should belong to equal Auditorium!");
         }
 
         this.showEvent = showEvent;

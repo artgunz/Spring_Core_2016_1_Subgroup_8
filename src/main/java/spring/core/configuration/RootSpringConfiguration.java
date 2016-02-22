@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @ComponentScan(basePackages = {"spring.core.*"})
-@Import(value = {AspectSpringConfiguration.class, DBSpringConfiguration.class, MyBatisSpringConfiguration.class})
+@Import(value = {AspectSpringConfiguration.class, DBSpringConfiguration.class})
 public class RootSpringConfiguration {
 
     @Bean(name = "auditoriumLoaderImpl")

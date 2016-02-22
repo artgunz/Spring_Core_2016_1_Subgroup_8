@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
-public class ShowEvent{
+public class ShowEvent {
     final Event event;
     final Auditorium auditorium;
     final Date showTime;

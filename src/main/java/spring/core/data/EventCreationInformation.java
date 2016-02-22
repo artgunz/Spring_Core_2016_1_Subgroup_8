@@ -1,8 +1,5 @@
 package spring.core.data;
 
-import java.util.Date;
-import java.util.List;
-
 public class EventCreationInformation {
     String name;
     Price basePrice;

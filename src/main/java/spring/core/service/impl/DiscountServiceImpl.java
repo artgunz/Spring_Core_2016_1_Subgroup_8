@@ -11,7 +11,6 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,9 +23,9 @@ public class DiscountServiceImpl implements DiscountService {
     public Discount getDiscount(final User user, final Event event, final Date date) {
         Double discountCalculated = 0.0;
 
-        for(DiscountStrategy discountStrategy: discountStrategyList){
-            Discount discount = discountStrategy.calculateDiscount(user,  event, date);
-            if(discountCalculated < discount.getValue()){
+        for (DiscountStrategy discountStrategy : discountStrategyList) {
+            Discount discount = discountStrategy.calculateDiscount(user, event, date);
+            if (discountCalculated < discount.getValue()) {
                 discountCalculated = discount.getValue();
             }
         }

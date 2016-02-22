@@ -1,4 +1,4 @@
-package spring.core.data;
+package spring.core.data.db;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

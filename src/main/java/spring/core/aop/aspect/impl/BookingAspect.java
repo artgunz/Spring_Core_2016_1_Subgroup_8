@@ -7,21 +7,14 @@ import spring.core.aop.aspect.CounterAspect;
 import spring.core.aop.aspect.LoggerAspect;
 import spring.core.aop.handler.CountableMethodHandler;
 import spring.core.aop.handler.data.CountedEventMethodData;
-import spring.core.data.Currency;
-import spring.core.data.Event;
-import spring.core.data.Price;
 import spring.core.data.TicketCreationInformation;
 import spring.core.data.User;
 import spring.core.data.UserStatistic;
 
-import java.util.Random;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;

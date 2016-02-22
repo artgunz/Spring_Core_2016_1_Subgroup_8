@@ -12,7 +12,6 @@ import spring.core.data.Seat;
 import spring.core.data.Ticket;
 import spring.core.data.TicketCreationInformation;
 import spring.core.data.User;
-import spring.core.data.UserStatistic;
 import spring.core.data.UserTicket;
 import spring.core.service.AuditoriumService;
 import spring.core.service.BookingService;
@@ -44,19 +43,19 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Price getTicketPrice(final Event event, final Date date, final Seat seat, final User user) {
         Price basePrice = event.getBasePrice();
-        if(basePrice==null){
+        if (basePrice == null) {
             basePrice = new Price(Currency.USD, 0.0D);
         }
 
         Double basePriceDouble = basePrice.getValue();
 
         auditoriumService.getVipSeats(seat.getAuditorium().getName());
-        basePriceDouble = basePriceDouble*seat.getPriceIncrement();
-        basePriceDouble = basePriceDouble*event.getRating().getPriceIncrement();
+        basePriceDouble = basePriceDouble * seat.getPriceIncrement();
+        basePriceDouble = basePriceDouble * event.getRating().getPriceIncrement();
 
         Double discount = discountService.getDiscount(user, event, date).getValue();
 
-        basePriceDouble = basePriceDouble-discount;
+        basePriceDouble = basePriceDouble - discount;
 
         return new Price(basePrice.getCurrency(), basePriceDouble);
     }
@@ -64,8 +63,10 @@ public class BookingServiceImpl implements BookingService {
     @Loggable
     @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public UserTicket bookTicket(final User user, final Price price, final TicketCreationInformation ticketCreationInformation) {
-        UserTicket userTicket = new UserTicket(ticketCreationInformation.getShowEvent(), ticketCreationInformation.getSeat(), user, price);
+    public UserTicket bookTicket(final User user, final Price price, final TicketCreationInformation
+            ticketCreationInformation) {
+        UserTicket userTicket = new UserTicket(ticketCreationInformation.getShowEvent(), ticketCreationInformation
+                .getSeat(), user, price);
 
         ticketsDAO.addTicket(user, userTicket);
 

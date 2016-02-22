@@ -2,18 +2,14 @@ package spring.core.dao.impl.map;
 
 import spring.core.dao.TicketsDAO;
 import spring.core.data.Event;
-import spring.core.data.ShowEvent;
 import spring.core.data.Ticket;
-import spring.core.data.TicketCreationInformation;
 import spring.core.data.User;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.springframework.stereotype.Repository;
 
@@ -25,7 +21,7 @@ public class HashMapTicketsDAOImpl implements TicketsDAO {
     public Ticket addTicket(User user, Ticket ticket) {
         List<Ticket> ticketsForUser = ticketStorage.get(user);
 
-        if(ticketsForUser == null){
+        if (ticketsForUser == null) {
             ticketsForUser = new ArrayList<>();
             ticketStorage.put(user, ticketsForUser);
         }
@@ -39,10 +35,11 @@ public class HashMapTicketsDAOImpl implements TicketsDAO {
     public List<Ticket> getAllTickets(Event event, Date date) {
         List<Ticket> ticketsForEventAndDate = new ArrayList<>();
 
-        for(Map.Entry<User, List<Ticket>> entry : ticketStorage.entrySet()){
+        for (Map.Entry<User, List<Ticket>> entry : ticketStorage.entrySet()) {
             List<Ticket> tickets = entry.getValue();
-            for(Ticket ticket:tickets){
-                if(ticket.getShowEvent().getEvent().equals(event) && ticket.getShowEvent().getShowTime().equals(date)){
+            for (Ticket ticket : tickets) {
+                if (ticket.getShowEvent().getEvent().equals(event) && ticket.getShowEvent().getShowTime().equals
+                        (date)) {
                     ticketsForEventAndDate.add(ticket);
                 }
             }
@@ -52,7 +49,7 @@ public class HashMapTicketsDAOImpl implements TicketsDAO {
     }
 
     @Override
-    public List<Ticket> getTicketsForUser(User user){
+    public List<Ticket> getTicketsForUser(User user) {
         return ticketStorage.get(user);
     }
 }

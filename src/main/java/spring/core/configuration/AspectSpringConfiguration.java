@@ -11,7 +11,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @EnableAspectJAutoProxy
-public class AspectSpringConfiguration{
+public class AspectSpringConfiguration {
 
     @Bean
     public EventAspect eventAspect() {
