@@ -1,6 +1,7 @@
 package spring.core.service.impl;
 
-import spring.core.configuration.SpringConfiguration;
+import spring.core.configuration.AspectSpringConfiguration;
+import spring.core.configuration.RootSpringConfiguration;
 import spring.core.exception.ElementNotFoundException;
 import spring.core.service.AuditoriumService;
 
@@ -16,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {SpringConfiguration.class}, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = {RootSpringConfiguration.class, AspectSpringConfiguration.class}, loader = AnnotationConfigContextLoader.class)
 @ActiveProfiles("test")
 public class AuditoriumServiceImplTest {
 

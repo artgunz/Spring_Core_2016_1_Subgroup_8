@@ -8,15 +8,15 @@ import spring.core.data.ShowEvent;
 import java.util.List;
 
 public interface EventDAO {
-    Event createEvent(EventCreationInformation eventCreationInformation);
+    Event createEvent(EventCreationInformation eventCreationInformation) throws Exception;
 
     void deleteEvent(Event event);
 
-    Event searchEventByName(String eventName);
+    Event searchEventByName(String eventName) throws Exception;
 
-    List<Event> getAllEvents();
+    List<Event> getAllEvents() throws Exception;
 
-    List<ShowEvent> getAllShows();
+    List<ShowEvent> getAllShows() throws Exception;
 
-    void addShowEvent(ShowEvent showEvent);
+    void addShowEvent(ShowEvent showEvent) throws Exception;
 }

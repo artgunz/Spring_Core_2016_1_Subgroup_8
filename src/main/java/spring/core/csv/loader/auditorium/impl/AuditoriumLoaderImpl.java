@@ -50,6 +50,7 @@ public class AuditoriumLoaderImpl implements AuditoriumLoader, ResourceLoaderAwa
     }
 
     @Required
+    @Override
     public void setResourceName(final String resourceName) {
         this.resourceName = resourceName;
     }

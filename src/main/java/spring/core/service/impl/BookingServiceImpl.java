@@ -5,6 +5,7 @@ import spring.core.aop.annotation.Loggable;
 import spring.core.aop.annotation.LoggableAround;
 import spring.core.aop.handler.impl.DefaultCountableMethodHandler;
 import spring.core.dao.TicketsDAO;
+import spring.core.data.Currency;
 import spring.core.data.Event;
 import spring.core.data.Price;
 import spring.core.data.Seat;
@@ -43,6 +44,9 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Price getTicketPrice(final Event event, final Date date, final Seat seat, final User user) {
         Price basePrice = event.getBasePrice();
+        if(basePrice==null){
+            basePrice = new Price(Currency.USD, 0.0D);
+        }
 
         Double basePriceDouble = basePrice.getValue();
 

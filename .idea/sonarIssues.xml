@@ -38,6 +38,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/resources/db.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/resources/init.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/resources/log4j2.xml">
           <value>
             <set />
@@ -238,12 +248,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AspectSpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AuditoriumLoader.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/AuditoriumLoaderImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/DBSpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/MyBatisSpringConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/configuration/RootSpringConfiguration.java">
           <value>
             <set />
           </value>
@@ -363,6 +393,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/mybatis/MapperUtility.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/mybatis/MyBatisEventDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/mybatis/insertproviders/EventInsertProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/mybatis/mapper/EnumTypeHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/mybatis/mapper/EventMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Auditorium.java">
           <value>
             <set />
@@ -398,12 +453,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Item.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Price.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/PriceVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/Rating.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/RatingType.java">
           <value>
             <set />
           </value>
@@ -464,6 +534,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/user/search/UserSearchInformation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/vo/EventVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/vo/PriceVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/vo/RatingVO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/vo/ShowEventVO.java">
           <value>
             <set />
           </value>
@@ -643,6 +733,11 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccore/src/ca/canadiantire/core/dao/impl/CtcTaskDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctccore/testsrc/ca/canadiantire/core/model/attribute/handler/TransientOrderBooleanAttributeHandlerTest.java">
           <value>
             <set />
@@ -659,6 +754,21 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/xslt/FR/HeaderConfirmation_FR_${et.mode}.xslt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/src/ca/canadiantire/customernotifications/util/builder/component/TotalsBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcfacades/src/ca/canadiantire/facades/commerce/impl/DefaultPosOrderFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcfulfilmentprocess/resources/process/placeorder.xml">
           <value>
             <set />
           </value>
@@ -729,6 +839,16 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/interceptor/AbstractOrderRemoveInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/impl/CtcDirectCancelService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/process/impl/OrderCancelPendingServiceImpl.java">
           <value>
             <set />
           </value>

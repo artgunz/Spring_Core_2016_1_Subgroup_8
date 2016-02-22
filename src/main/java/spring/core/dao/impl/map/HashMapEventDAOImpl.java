@@ -13,9 +13,11 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 @Repository("hashMapEventDAO")
+@Profile("test")
 public class HashMapEventDAOImpl implements EventDAO {
     private final static Set<Event> eventStorage = new HashSet<>();
     private final static Set<ShowEvent> showEventStorage = new HashSet<ShowEvent>();

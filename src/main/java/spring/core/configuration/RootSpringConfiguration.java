@@ -1,9 +1,5 @@
 package spring.core.configuration;
 
-import spring.core.aop.aspect.impl.BookingAspect;
-import spring.core.aop.aspect.impl.DefaultLoggerAspect;
-import spring.core.aop.aspect.impl.EventAspect;
-import spring.core.aop.aspect.impl.EventUserLuckyAspect;
 import spring.core.csv.loader.auditorium.AuditoriumLoader;
 import spring.core.csv.loader.auditorium.impl.AuditoriumLoaderImpl;
 import spring.core.strategy.discount.DiscountStrategy;
@@ -16,18 +12,18 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
 @ComponentScan(basePackages = {"spring.core.*"})
-@EnableAspectJAutoProxy
-public class SpringConfiguration {
+@Import(value = {AspectSpringConfiguration.class, DBSpringConfiguration.class, MyBatisSpringConfiguration.class})
+public class RootSpringConfiguration {
 
     @Bean(name = "auditoriumLoaderImpl")
     @Profile("dev")
     public AuditoriumLoader auditoriumLoaderDev() {
-        AuditoriumLoaderImpl auditoriumLoader = new AuditoriumLoaderImpl();
+        AuditoriumLoader auditoriumLoader = new AuditoriumLoaderImpl();
         auditoriumLoader.setResourceName("classpath:auditorium.csv");
 
         return auditoriumLoader;
@@ -36,7 +32,7 @@ public class SpringConfiguration {
     @Bean(name = "auditoriumLoaderImpl")
     @Profile("test")
     public AuditoriumLoader auditoriumLoaderTest() {
-        AuditoriumLoaderImpl auditoriumLoader = new AuditoriumLoaderImpl();
+        AuditoriumLoader auditoriumLoader = new AuditoriumLoaderImpl();
         auditoriumLoader.setResourceName("classpath:auditoriumTest.csv");
 
         return auditoriumLoader;
@@ -50,25 +46,4 @@ public class SpringConfiguration {
 
         return aList;
     }
-
-    @Bean
-    public EventAspect eventAspect() {
-        return new EventAspect();
-    }
-
-    @Bean
-    public BookingAspect bookingAspect() {
-        return new BookingAspect();
-    }
-
-    @Bean
-    public DefaultLoggerAspect defaultAspect() {
-        return new DefaultLoggerAspect();
-    }
-
-    @Bean
-    public EventUserLuckyAspect eventUserLuckyAspect() {
-        return new EventUserLuckyAspect();
-    }
-
 }

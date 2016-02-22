@@ -10,19 +10,19 @@ import java.util.List;
 
 public interface EventService {
 
-    Event create(EventCreationInformation creationInformation);
+    Event create(EventCreationInformation creationInformation) throws Exception;
 
     void remove(Event event);
 
-    Event getByName(String name);
+    Event getByName(String name) throws Exception;
 
-    List<Event> getAll();
+    List<Event> getAll() throws Exception;
 
-    List<Event> getForDateRange(Date fromDate, Date tillDate);
+    List<Event> getForDateRange(Date fromDate, Date tillDate) throws Exception;
 
-    List<ShowEvent> getNextEvents(Date tillDate);
+    List<ShowEvent> getNextEvents(Date tillDate) throws Exception;
 
-    List<ShowEvent> getNextEventsByName(Date tillDate, String eventName);
+    List<ShowEvent> getNextEventsByName(Date tillDate, String eventName) throws Exception;
 
-    ShowEvent assignAuditoriumAndDate(Event event, Auditorium auditorium, Date date);
+    ShowEvent assignAuditoriumAndDate(Event event, Auditorium auditorium, Date date) throws Exception;
 }

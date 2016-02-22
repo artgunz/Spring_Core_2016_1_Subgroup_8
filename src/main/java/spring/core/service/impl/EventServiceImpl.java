@@ -25,7 +25,12 @@ public class EventServiceImpl implements EventService {
     EventDAO eventDAO;
 
     @Override
-    public Event create(final EventCreationInformation creationInformation) {
+    public Event create(final EventCreationInformation creationInformation) throws Exception {
+        Event eventSearch = eventDAO.searchEventByName(creationInformation.getName());
+        if(eventSearch!=null){
+            return eventSearch;
+        }
+
         return eventDAO.createEvent(creationInformation);
     }
 
@@ -37,17 +42,17 @@ public class EventServiceImpl implements EventService {
     @Loggable
     @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public Event getByName(@EventName final String eventName) {
+    public Event getByName(@EventName final String eventName) throws Exception {
         return eventDAO.searchEventByName(eventName);
     }
 
     @Override
-    public List<Event> getAll() {
+    public List<Event> getAll() throws Exception {
         return eventDAO.getAllEvents();
     }
 
     @Override
-    public List<Event> getForDateRange(final Date fromDate, final Date tillDate) {
+    public List<Event> getForDateRange(final Date fromDate, final Date tillDate) throws Exception {
         List<Event> listEvents = new ArrayList<>();
 
         for (ShowEvent event : eventDAO.getAllShows()) {
@@ -61,7 +66,7 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public List<ShowEvent> getNextEvents(final Date tillDate) {
+    public List<ShowEvent> getNextEvents(final Date tillDate) throws Exception {
         Date current = new Date();
         List<ShowEvent> listEvents = new ArrayList<>();
 
@@ -78,7 +83,7 @@ public class EventServiceImpl implements EventService {
     @Loggable
     @Countable(handler = DefaultCountableMethodHandler.class)
     @Override
-    public List<ShowEvent> getNextEventsByName(final Date tillDate, @EventName final String eventName) {
+    public List<ShowEvent> getNextEventsByName(final Date tillDate, @EventName final String eventName) throws Exception {
         Date current = new Date();
         List<ShowEvent> listEvents = new ArrayList<>();
 
@@ -94,7 +99,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public ShowEvent assignAuditoriumAndDate(final Event event, final Auditorium auditorium, final Date date) throws
-            EventAlreadyExistsException {
+            Exception {
         ShowEvent foundedEvent = null;
 
         for (final ShowEvent searchEvent : eventDAO.getAllShows()) {
