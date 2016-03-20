@@ -13,4 +13,6 @@ public interface AuditoriumService {
     List<Integer> getVipSeats(String auditoriumName); //TODO do we really need it???
 
     Auditorium searchAuditoriumByName(String name);
+
+    Auditorium addAuditorium(Auditorium auditorium);
 }

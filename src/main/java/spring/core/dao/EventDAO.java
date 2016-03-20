@@ -10,7 +10,7 @@ import java.util.List;
 public interface EventDAO {
     Event createEvent(EventCreationInformation eventCreationInformation) throws Exception;
 
-    void deleteEvent(Event event);
+    void deleteEvent(Long eventPk);
 
     Event searchEventByName(String eventName) throws Exception;
 

@@ -1,15 +1,37 @@
 package spring.core.data;
 
+import spring.core.data.db.Item;
+
+import java.io.Serializable;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Auditorium {
-    final String name;
-    final Integer seatsCount;
-    List<Integer> vipSeats;
+@Entity
+@Table(name = "auditorium")
+public class Auditorium extends Item implements Serializable {
+
+    @Column(name = "auditorium_name", unique = true)
+    String name;
+
+    @Column(name = "seat_count")
+    Integer seatsCount;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL},
+            mappedBy = "auditorium")
+    List<Seat> vipSeats;
+
+    public Auditorium() {
+    }
 
     public Auditorium(final String name, final Integer seatsCount) {
         this.name = name;
@@ -20,15 +42,23 @@ public class Auditorium {
         return name;
     }
 
+    public void setName(final String name) {
+        this.name = name;
+    }
+
     public Integer getSeatsCount() {
         return seatsCount;
     }
 
-    public List<Integer> getVipSeats() {
+    public void setSeatsCount(final Integer seatsCount) {
+        this.seatsCount = seatsCount;
+    }
+
+    public List<Seat> getVipSeats() {
         return vipSeats;
     }
 
-    public void setVipSeats(final List<Integer> vipSeats) {
+    public void setVipSeats(final List<Seat> vipSeats) {
         this.vipSeats = vipSeats;
     }
 

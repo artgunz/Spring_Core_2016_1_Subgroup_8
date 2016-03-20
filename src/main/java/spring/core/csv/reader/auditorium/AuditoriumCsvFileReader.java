@@ -2,6 +2,7 @@ package spring.core.csv.reader.auditorium;
 
 import spring.core.csv.reader.CsvFileReader;
 import spring.core.data.Auditorium;
+import spring.core.data.Seat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,15 +21,25 @@ public class AuditoriumCsvFileReader extends CsvFileReader<Auditorium> {
             CSVRecord record = csvRecords.get(i);
             //Create a new student object and fill his data
 
-            Auditorium student = new Auditorium(
+            Auditorium auditorium = new Auditorium(
                     record.get(FILE_HEADER_MAPPING[0]),
                     Integer.valueOf(record.get(FILE_HEADER_MAPPING[1])));
 
-            List<Integer> vipSeatsList = readVipSeats(record);
+            List<Integer> vipSeatsListIntegers = readVipSeats(record);
+            List<Seat> vipSeatsList = new ArrayList<>();
 
-            student.setVipSeats(vipSeatsList);
+            for (Integer integer:vipSeatsListIntegers){
+                Seat seat = new Seat();
+                seat.setPriceIncrement(1.5);
+                seat.setAuditorium(auditorium);
+                seat.setId(integer);
 
-            students.add(student);
+                vipSeatsList.add(seat);
+            }
+
+            auditorium.setVipSeats(vipSeatsList);
+
+            students.add(auditorium);
         }
 
         return students;

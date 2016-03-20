@@ -1,10 +1,25 @@
 package spring.core.data;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@Embeddable
+@Access(AccessType.FIELD)
 public class Price {
-    final Currency currency;
-    final Double value;
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "price_currency")
+    Currency currency;
+    @Column(name = "price_value")
+    Double value;
+
+    public Price() {
+    }
 
     public Price(final Currency currency, final Double value) {
         this.currency = currency;

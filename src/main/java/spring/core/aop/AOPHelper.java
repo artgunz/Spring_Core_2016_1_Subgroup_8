@@ -36,7 +36,7 @@ public final class AOPHelper {
     public static <T> T getArgWithType(JoinPoint point, Class<T>
             annotationType) {
         for (Object arg : point.getArgs()) {
-            if (arg.getClass().isAssignableFrom(annotationType))
+            if (arg!=null && arg.getClass().isAssignableFrom(annotationType))
                 return (T) arg;
         }
 

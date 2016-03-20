@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Required;
 public interface AuditoriumLoader {
     List<Auditorium> loadAuditoriumList();
 
-
     @Required
     void setResourceName(String resourceName);
 }

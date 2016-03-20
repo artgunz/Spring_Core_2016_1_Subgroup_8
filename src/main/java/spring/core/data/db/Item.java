@@ -1,8 +1,15 @@
 package spring.core.data.db;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import java.io.Serializable;
 
-public class Item {
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import javax.persistence.*;
+
+@MappedSuperclass
+public class Item implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="pk", nullable = false)
     Long pk;
 
     public Long getPk() {

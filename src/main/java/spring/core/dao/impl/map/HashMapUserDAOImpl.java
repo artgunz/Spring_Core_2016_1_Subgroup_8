@@ -12,9 +12,11 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
-@Repository("hashUserDao")
+@Repository
+@Profile("test")
 public class HashMapUserDAOImpl implements UserDAO {
     private final static Set<User> userStorage = new HashSet<User>();
 
@@ -33,7 +35,7 @@ public class HashMapUserDAOImpl implements UserDAO {
     }
 
     public void deleteUser(final Long userId) {
-        User user = searchUserById(userId);
+        User user = searchUserByPk(userId);
         userStorage.remove(user);
     }
 
@@ -46,9 +48,9 @@ public class HashMapUserDAOImpl implements UserDAO {
         return null;
     }
 
-    public User searchUserById(final Long userId) {
+    public User searchUserByPk(final Long userId) {
         for (final User user : userStorage) {
-            if (user.getId().equals(userId)) {
+            if (user.getPk().equals(userId)) {
                 return user;
             }
         }

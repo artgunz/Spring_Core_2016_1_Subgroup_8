@@ -10,9 +10,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
-@Repository("hashMapEventDAO")
+@Repository
+@Profile("test")
 public class HashMapEventDAOImpl implements EventDAO {
     private final static Set<Event> eventStorage = new HashSet<>();
     private final static Set<ShowEvent> showEventStorage = new HashSet<ShowEvent>();
@@ -24,9 +26,9 @@ public class HashMapEventDAOImpl implements EventDAO {
         return event;
     }
 
-    public void deleteEvent(final Event event) {
-        if (event != null) {
-            eventStorage.remove(event);
+    public void deleteEvent(final Long eventPk) {
+        if (eventPk != null) {
+            eventStorage.remove(eventPk);
         }
 
     }

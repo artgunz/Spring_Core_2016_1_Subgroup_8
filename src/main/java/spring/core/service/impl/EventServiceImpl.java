@@ -16,11 +16,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EventServiceImpl implements EventService {
+    private static final Logger LOGGER = LogManager.getLogger(EventServiceImpl.class);
+
     @Autowired
     EventDAO eventDAO;
 
@@ -28,6 +32,7 @@ public class EventServiceImpl implements EventService {
     public Event create(final EventCreationInformation creationInformation) throws Exception {
         Event eventSearch = eventDAO.searchEventByName(creationInformation.getName());
         if (eventSearch != null) {
+            LOGGER.warn("Event with name {} exists!", creationInformation.getName());
             return eventSearch;
         }
 
@@ -36,7 +41,7 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public void remove(final Event event) {
-        eventDAO.deleteEvent(event);
+        eventDAO.deleteEvent(event.getPk());
     }
 
     @Loggable

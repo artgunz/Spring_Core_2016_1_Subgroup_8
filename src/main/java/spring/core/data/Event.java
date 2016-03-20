@@ -1,13 +1,32 @@
 package spring.core.data;
 
+import spring.core.data.db.Item;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Event {
-    final String name;
-    final Price basePrice;
-    final Rating rating;
+@Entity
+@Table(name = "event")
+public class Event extends Item implements Serializable {
+    @Column(name = "event_name", nullable = false)
+    String name;
+
+    @Embedded
+    Price basePrice;
+
+    @Embedded
+    Rating rating;
+
+    public Event() {
+    }
 
     public Event(final String name, final Price basePrice, final Rating rating) {
         this.name = name;

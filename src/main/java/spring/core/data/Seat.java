@@ -1,36 +1,63 @@
 package spring.core.data;
 
+import spring.core.data.db.Item;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-public class Seat {
-    final Auditorium auditorium;
-    final Integer id;
-    Double priceIncrement;
+@Entity
+@Table(name = "seat")
+public class Seat extends Item implements Serializable{
+
+    @OneToOne
+    Auditorium auditorium;
+
+    @Column(name = "seat_num", nullable = false)
+    Integer id;
+
+    @Column(name = "price_increment", nullable = true)
+    Double priceIncrement = 0.0;
+
+    public Seat() {
+    }
 
     public Seat(final Auditorium auditorium, final Integer id) {
         this.auditorium = auditorium;
         this.id = id;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public Double getPriceIncrement() {
-        if (priceIncrement == null && getAuditorium().getVipSeats().contains(getId())) {
-            this.priceIncrement = 1.5;
-        } else {
-            priceIncrement = 1.0;
-        }
-
-        return priceIncrement;
-    }
-
     public Auditorium getAuditorium() {
         return auditorium;
     }
 
+    public void setAuditorium(final Auditorium auditorium) {
+        this.auditorium = auditorium;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(final Integer id) {
+        this.id = id;
+    }
+
+    public Double getPriceIncrement() {
+        return priceIncrement;
+    }
+
+    public void setPriceIncrement(final Double priceIncrement) {
+        this.priceIncrement = priceIncrement;
+    }
 
     @Override
     public boolean equals(final Object o) {

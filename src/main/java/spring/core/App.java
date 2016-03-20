@@ -1,6 +1,7 @@
 package spring.core;
 
 import spring.core.configuration.RootSpringConfiguration;
+import spring.core.csv.loader.auditorium.AuditoriumLoader;
 import spring.core.data.Auditorium;
 import spring.core.data.Currency;
 import spring.core.data.Event;
@@ -41,10 +42,14 @@ public class App {
 
         App app = new App();
         app.init();
+        app.initAuditoriums();
 
         String ratings[] = new String[]{"HIGH", "LOW", "MID"};
+        Double pricesRatings[] = new Double[]{1.2, 2.3, 5.6};
 
         String eventsNames[] = new String[]{"XXX", "DEADPOOL", "WALKING DEAD", "COMEDY"};
+
+        String pricesCurrency[] = new String[]{"USD", "EUR", "CAD", "UAN"};
         Double pricesEvents[] = new Double[]{2.55, 3.55, 5.55, 8.66};
 
         String eventsShowDates[] = new String[]{
@@ -67,15 +72,29 @@ public class App {
         int iterations = 10;
 
         for (int i = 0; i <= iterations; i++) {
-            int idx = new Random().nextInt(ratings.length);
+            int idx = new Random().nextInt(users.length);
+            String userAsString = (users[idx]);
+            String userEmail = String.format("%s@email.com", userAsString.toLowerCase());
+            User user = app.registerUser(userAsString, userEmail);
+            user = app.getUser(userAsString, userEmail);
+            assert user!=null;
+
+            idx = new Random().nextInt(ratings.length);
             String randomRating = (ratings[idx]);
-            Rating rating = Rating.valueOf(randomRating);
+            Double randomPriceRating = (pricesRatings[idx]);
+            final Rating rating = new Rating(randomRating, randomPriceRating);
+
+            idx = new Random().nextInt(pricesEvents.length);
+            Double randomPrice = (pricesEvents[idx]);
+            idx = new Random().nextInt(pricesCurrency.length);
+            Currency randomCurrency = Currency.valueOf(pricesCurrency[idx]);
+            final Price price = new Price(randomCurrency, randomPrice);
 
             idx = new Random().nextInt(eventsNames.length);
             String randomEventName = (eventsNames[idx]);
-            Double randomPriceEvent = (pricesEvents[idx]);
-
-            Event event = app.registerEvent(randomEventName, randomPriceEvent, rating);
+            Event event = app.registerEvent(randomEventName, price, rating);
+            event = app.getEvent(randomEventName);
+            assert event!=null;
 
             idx = new Random().nextInt(eventsShowDates.length);
             String eventShowDateRandom = (eventsShowDates[idx]);
@@ -85,11 +104,6 @@ public class App {
             String auditorium = (auditoriums[idx]);
 
             ShowEvent showEvent = app.registerShowEvent(randomEventName, auditorium, eventShowDate);
-
-            idx = new Random().nextInt(users.length);
-            String userAsString = (users[idx]);
-
-            User user = app.registerUser(userAsString, String.format("%s@email.com", userAsString.toLowerCase()));
 
             UserTicket userTicket = app.registerTicketForFirstAvailableTime(user, randomEventName);
 
@@ -103,15 +117,35 @@ public class App {
         context = new AnnotationConfigApplicationContext(RootSpringConfiguration.class);
     }
 
-    public Event registerEvent(String eventName, Double eventPrice, Rating eventRating) throws Exception {
+    public void initAuditoriums(){
+        LOGGER.debug("Loading auditoriums....");
+
+        AuditoriumLoader auditoriumLoader = context.getBean(AuditoriumLoader.class);
+        AuditoriumService auditoriumService = context.getBean(AuditoriumService.class);
+
+        List<Auditorium> auditoriums = auditoriumLoader.loadAuditoriumList();
+        for (Auditorium auditorium : auditoriums) {
+            auditoriumService.addAuditorium(auditorium);
+        }
+
+        LOGGER.info("Loaded {} auditoriums....", auditoriums.size());
+    }
+
+    public Event registerEvent(String eventName, Price price, Rating eventRating) throws Exception {
         EventCreationInformation eventCreationInformation = new EventCreationInformation();
         eventCreationInformation.setRating(eventRating);
-        eventCreationInformation.setBasePrice(new Price(Currency.USD, eventPrice));
+        eventCreationInformation.setBasePrice(price);
         eventCreationInformation.setName(eventName);
 
         EventService eventService = context.getBean(EventService.class);
 
         return eventService.create(eventCreationInformation);
+    }
+
+    public Event getEvent(String eventName) throws Exception {
+        EventService eventService = context.getBean(EventService.class);
+        System.out.println(eventService.getAll());
+        return eventService.getByName(eventName);
     }
 
     public ShowEvent registerShowEvent(String eventName, String auditoriumName, Date showTime) throws Exception {
@@ -127,7 +161,7 @@ public class App {
         try {
             showEvent = eventService.assignAuditoriumAndDate(event, auditorium, showTime);
         }catch (EventAlreadyExistsException ignored){
-
+            ignored.printStackTrace();
         }
 
         return showEvent;
@@ -158,8 +192,15 @@ public class App {
         UserRegistrationInformation userRegistrationInformation = new UserRegistrationInformation();
         userRegistrationInformation.setUserName(userName);
         userRegistrationInformation.setUserEmail(userEmail);
+        userRegistrationInformation.setBirthDate(new Date());
 
         return userFacade.register(userRegistrationInformation);
+    }
+
+    private User getUser(String userName, String userEmail) {
+        UserFacade userFacade = context.getBean(UserFacade.class);
+        System.out.println(userFacade.getUsersByName(userName));
+        return userFacade.getUserByEmail(userEmail);
     }
 
     private String[] getAuditoriums() {

@@ -51,7 +51,7 @@ public class BookingServiceImpl implements BookingService {
 
         auditoriumService.getVipSeats(seat.getAuditorium().getName());
         basePriceDouble = basePriceDouble * seat.getPriceIncrement();
-        basePriceDouble = basePriceDouble * event.getRating().getPriceIncrement();
+        basePriceDouble = basePriceDouble * event.getRating().getPrice();
 
         Double discount = discountService.getDiscount(user, event, date).getValue();
 

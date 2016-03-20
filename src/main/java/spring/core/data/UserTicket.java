@@ -1,12 +1,28 @@
 package spring.core.data;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@Entity
+@Table(name = "user_ticket")
+@DiscriminatorValue("Y")
 public class UserTicket extends Ticket {
-    final User user;
-    final Price price;
+
+    @OneToOne
+    User user;
+
+    @Embedded
+    Price price;
+
+    public UserTicket() {
+    }
 
     public UserTicket(final ShowEvent showEvent, final Seat seat, final User user, final Price price) {
         super(showEvent, seat);

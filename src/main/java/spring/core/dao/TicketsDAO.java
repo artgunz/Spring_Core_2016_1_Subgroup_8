@@ -12,5 +12,5 @@ public interface TicketsDAO {
 
     List<Ticket> getAllTickets(Event event, Date date);
 
-    List<Ticket> getTicketsForUser(User user);
+    List getTicketsForUser(User user);
 }

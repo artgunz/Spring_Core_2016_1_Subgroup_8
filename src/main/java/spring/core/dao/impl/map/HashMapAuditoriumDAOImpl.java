@@ -14,9 +14,12 @@ import javax.annotation.PostConstruct;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository("hashMapAuditoriumDAO")
+@Repository
+@Profile("test")
 public class HashMapAuditoriumDAOImpl implements AuditoriumDAO {
     private static final Logger LOGGER = LogManager.getLogger(HashMapAuditoriumDAOImpl.class);
 

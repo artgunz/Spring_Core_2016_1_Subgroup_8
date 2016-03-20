@@ -1,25 +1,37 @@
 package spring.core.data;
 
+import spring.core.data.db.Item;
+
+import java.io.Serializable;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class User {
-    Long id;
+@Entity
+@Table(name = "user")
+public class User extends Item implements Serializable {
+    @Column(name="user_name", nullable = false)
     String name;
+    @Column(name="user_email", nullable = false, unique = true)
     String email;
+    @Column(name="user_birth_date", nullable = false)
     Date birthDate;
+
+    @OneToOne
+    @JoinColumn(name="user_statistic_pk")
     UserStatistic userStatistic;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -62,7 +74,6 @@ public class User {
         final User user = (User) o;
 
         return new EqualsBuilder()
-                .append(id, user.id)
                 .append(name, user.name)
                 .append(email, user.email)
                 .isEquals();
@@ -71,7 +82,6 @@ public class User {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
-                .append(id)
                 .append(name)
                 .append(email)
                 .toHashCode();
@@ -80,7 +90,6 @@ public class User {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("id", id)
                 .append("name", name)
                 .append("email", email)
                 .append("birthDate", birthDate)

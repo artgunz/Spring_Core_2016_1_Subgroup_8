@@ -1,24 +1,43 @@
 package spring.core.data;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import spring.core.data.db.Item;
 
-public enum Rating {
-    HIGH(1.25), MID(1.0), LOW(0.75);
+import java.io.Serializable;
 
-    Double priceIncrement = 1.0;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
-    Rating(final Double priceIncrement) {
-        this.priceIncrement = priceIncrement;
+@Embeddable
+@Access(AccessType.FIELD)
+public class Rating implements Serializable {
+    @Column(name = "rating_name")
+    String name;
+    @Column(name = "rating_price_coefficient")
+    Double price;
+
+    public Rating() {
     }
 
-    public Double getPriceIncrement() {
-        return priceIncrement;
+    public Rating(final String name, final Double price) {
+        this.name = name;
+        this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("priceIncrement", priceIncrement)
-                .toString();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(final Double price) {
+        this.price = price;
     }
 }

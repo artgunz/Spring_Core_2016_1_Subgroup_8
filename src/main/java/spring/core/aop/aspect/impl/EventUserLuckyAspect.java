@@ -6,6 +6,7 @@ import spring.core.data.Event;
 import spring.core.data.Price;
 import spring.core.data.User;
 import spring.core.data.UserStatistic;
+import spring.core.service.UserService;
 
 import java.util.Random;
 
@@ -16,10 +17,14 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Aspect
 public class EventUserLuckyAspect {
     private static final Logger LOGGER = LogManager.getLogger(EventUserLuckyAspect.class);
+
+    @Autowired
+    UserService userService;
 
     @Pointcut("execution(* spring.core.service.BookingService.*(..))")
     public void inBookingService() {
@@ -56,7 +61,8 @@ public class EventUserLuckyAspect {
 
         userStatistic.getLuckyEvents().add(event);
 
-        user.setUserStatistic(userStatistic);
+
+        userService.updateUserStatistic(user, userStatistic);
     }
 
     private boolean isLucky() {

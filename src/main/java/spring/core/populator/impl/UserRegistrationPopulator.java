@@ -18,6 +18,6 @@ public class UserRegistrationPopulator implements Populator<UserRegistrationInfo
     public void populate(final UserRegistrationInformation source, final User target) throws ConversionException {
         target.setEmail(source.getUserEmail());
         target.setName(source.getUserName());
-        target.setId(userIdGeneratorStrategy.generateId());
+        target.setPk(userIdGeneratorStrategy.generateId());
     }
 }

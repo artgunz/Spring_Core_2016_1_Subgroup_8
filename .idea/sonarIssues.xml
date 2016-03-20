@@ -333,6 +333,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/csv/reader/auditorium/AuditoriumCsvFileReader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao.java">
           <value>
             <set />
@@ -369,6 +374,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/HashMapTicketsDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/jpa/JpaAuditoriumDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/jpa/JpaEventDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/jpa/JpaTicketsDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/jpa/JpaUserDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/dao/impl/jpa/UserDAOImpl.java">
           <value>
             <set />
           </value>
@@ -534,6 +564,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/db/Item.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/db/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/spring/core/data/db/UserVO.java">
           <value>
             <set />
           </value>
@@ -733,6 +773,61 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctc-mocks/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/controller/ProductController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/dto/CorporateDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/dto/reservation/ReservationResponseEntryDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/facade/impl/InventoryFacadeImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/model/InventoryBalance.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/service/impl/InventoryServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/service/impl/PriceAvailabilityServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/service/impl/ReservationServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/utils/InventoryUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccommercewebservices/web/src/ca/canadiantire/validator/AddCartEntryRequestValidator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctccore/resources/ctccore-items.xml">
           <value>
             <set />
@@ -749,6 +844,11 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/html/FR/OrderCancelNotPickedUpPostPOS_FR_${et.mode}.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctccustomernotifications/exacttarget/html/FR/OrderCancelNotPickedUpPrePOS_FR_${et.mode}.html">
           <value>
             <set />
           </value>
@@ -848,12 +948,42 @@
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/CtcCalculationService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/impl/CtcCartCalculationServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/impl/CtcDirectCancelService.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/impl/CtcOrderCalculationServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/impl/OrderReplaceServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/process/impl/OrderCancelPendingServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/strategies/calculation/CtcFindPriceStrategy.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/src/ca/canadiantire/ctcservices/order/strategies/calculation/impl/DefaultCtcFindPriceStrategy.java">
           <value>
             <set />
           </value>
@@ -864,6 +994,16 @@
           </value>
         </entry>
         <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/testsrc/ca/canadiantire/ctcservices/order/impl/CtcRefundServiceImplTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/hybris-ext/ctcservices/testsrc/ca/canadiantire/ctcservices/order/impl/OrderReplaceServiceImplTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="Y:/ctco-ecom/utils/ctc-mocks/src/main/java/ca/canadiantire/inventorymock/service/impl/InventoryServiceImpl.java">
           <value>
             <set />
           </value>

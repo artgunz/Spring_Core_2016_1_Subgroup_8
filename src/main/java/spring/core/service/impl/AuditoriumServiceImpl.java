@@ -2,9 +2,12 @@ package spring.core.service.impl;
 
 import spring.core.dao.AuditoriumDAO;
 import spring.core.data.Auditorium;
+import spring.core.data.Event;
+import spring.core.data.Seat;
 import spring.core.exception.ElementNotFoundException;
 import spring.core.service.AuditoriumService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -43,14 +46,18 @@ public class AuditoriumServiceImpl implements AuditoriumService {
 
     @Override
     public List<Integer> getVipSeats(final String auditoriumName) throws ElementNotFoundException {
-        for (Auditorium auditorium : getAuditoriums()
-                ) {
+        for (Auditorium auditorium : getAuditoriums()) {
             if (auditorium.getName().equals(auditoriumName)) {
-                List<Integer> vipSeats = auditorium.getVipSeats();
+                List<Seat> vipSeats = auditorium.getVipSeats();
 
-                LOGGER.debug("Auditorium {} has {} vip seats", auditoriumName, vipSeats);
+                List<Integer> vipSeatsAsInt = new ArrayList<>();
+                for(Seat seat:vipSeats){
+                    vipSeatsAsInt.add(seat.getId());
+                }
 
-                return vipSeats;
+                LOGGER.debug("Auditorium {} has {} vip seats", auditoriumName, vipSeatsAsInt);
+
+                return vipSeatsAsInt;
             }
         }
 
@@ -60,5 +67,16 @@ public class AuditoriumServiceImpl implements AuditoriumService {
     @Override
     public Auditorium searchAuditoriumByName(final String name) {
         return auditoriumDAO.searchAuditoriumByName(name);
+    }
+
+    @Override
+    public Auditorium addAuditorium(final Auditorium auditorium) {
+        Auditorium auditoriumResult = auditoriumDAO.searchAuditoriumByName(auditorium.getName());
+        if (auditoriumResult != null) {
+            LOGGER.warn("Auditorium with name {} exists!", auditorium.getName());
+            return auditorium;
+        }
+
+        return auditoriumDAO.addAuditorium(auditorium);
     }
 }
